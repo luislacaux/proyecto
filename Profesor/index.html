@@ -3,9 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Formulario de Quimica</title>
-    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-     <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap.js"></script>
+    
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -24,17 +22,7 @@
       }
     </style>
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements 
-          - updated in Bootstrap 2.02 to include the http: -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <!-- Le fav and touch icons -->
-    <!--<link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">-->
+    
   </head>
 
   <body>
@@ -50,30 +38,40 @@
           <a class="brand">Laboratorio Química</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active">
+              <li>
                 <a>Inicio</a>
               </li>
-              <li>
-                <a href="index_asistencia.html">Asistencia</a>
-              </li>
-              <li>
+               <li>
                 <a href="index_laboratorios.html">Laboratorios</a>
               </li>
-              <li>
+               <li>
                 <a href="index_formularios.html">Formularios</a>
               </li>      
+               <ul class="nav">
+                  <li class="dropdown">  
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Estudiantes
+                      <b class="caret"></b>  
+                    </a>  
+                    <ul class="dropdown-menu"> 
+                          <li><a href="index_lista.html">Subir lista estudiantes</a></li>  
+                          <li><a href="index_lista.html">Ver resumen</a></li>  
+                    </ul>  
+                  </li> 
+               </ul>
               <li>
                 <a href="index_estadisticas.html">Estadísticas</a>
-              </li>     
+              </li>    
               <li>
-                <a href="index_lista.html">Subir lista de estudiantes</a>
-              </li> 
+                <li>
+                <a href="index_estadisticas.html">Agregar profesor</a>
+              </li>    
               <li>
-                <a href="index_revision.html">Revisar lab estudiante</a>
-              </li> 
+                <li>
+                <a href="index_estadisticas.html">Mis datos</a>
+              </li>    
               <li>
                 <a href="login.html">Salir</a>
-              </li>             
+              </li>           
             </ul>
            <!--/  <a class="btn btn-primary pull-right" href="http://twitter.github.com/bootstrap/">Twitter Bootstrap Home</a>-->
           </div><!--/.nav-collapse -->
@@ -92,46 +90,14 @@
         </div>
       </div><!-- end row 1 -->
 
-      <table class="table table-striped">  
-        <thead>  
-          <tr>  
-            <th>Student-ID</th>  
-            <th>First Name</th>  
-            <th>Last Name</th>  
-            <th>Grade</th>  
-          </tr>  
-        </thead>  
-        <tbody>  
-          <tr>  
-            <td>001</td>  
-            <td>Rammohan </td>  
-            <td>Reddy</td>  
-            <td>A+</td>  
-          </tr>  
-          <tr>  
-            <td>002</td>  
-            <td>Smita</td>  
-            <td>Pallod</td>  
-            <td>A</td>  
-          </tr>  
-          <tr>  
-            <td>003</td>  
-            <td>Rabindranath</td>  
-            <td>Sen</td>  
-            <td>A+</td>  
-          </tr>  
-        </tbody>  
-      </table> 
-
-      
-
-
     </div> <!-- /container -->
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
     
 
   </body>
+
+  <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+
 </html>
