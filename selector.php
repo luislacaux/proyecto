@@ -9,7 +9,7 @@ if ($validarUsuario == 1){
     $_SESSION["autenticado"]= "SI";
     header ("Location: profesor/index.html");
 }else {
-    header ("Location: index.php");
+    header ("Location: login.php");
    
 }
 ?>

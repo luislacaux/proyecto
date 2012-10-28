@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+session_start();
+require ("../security.php");
+?>
 <html lang="en">
   <head>
     <meta charset="utf-8">
