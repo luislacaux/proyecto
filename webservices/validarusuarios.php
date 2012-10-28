@@ -1,21 +1,21 @@
 <?php
 function validarUsuario($usuario,$contrasena){
-                //$db=conectarDB();
-               // $query = "select rut, contrasena from profesor where rut ='$usuario' AND contrasena = '$contrasena'";
-	        //$result = $db->query($query);
+                $db=conectarDB();
+               $query = "select rut, contrasena from estudiante where rut ='$usuario'";
+	       $result = $db->query($query);
 		
-               // foreach($result as $row){
+               foreach($result as $row){
                                  
-                //}
+               }
 
-                /*if($row[0]==$usuario && $row[1] == $contrasena){
+               if($row[0]==$usuario){
                     $db = null;
 	            return 1;
                 }
                
                 
-	        else {  return 0;} */
-    return 1;
+	        else {  return 0;}
+   
 		
 	}
 ?>
