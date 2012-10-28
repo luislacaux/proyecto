@@ -4,12 +4,12 @@ include ("./webservices/validarusuarios.php");
 
 //Inicio la sesion 
 session_start();
-$validarUsuario = 1;
+$validarUsuario = validarUsuario($_POST["usuario"],$_POST["contrasena"]);
 if ($validarUsuario == 1){
     $_SESSION["autenticado"]= "SI";
-    header ("Location: Profesor/index.html");
+    header ("Location: estudiante/index.html");
 }else {
-
+    header ("Location: index.php");
    
 }
 ?>

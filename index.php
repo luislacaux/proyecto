@@ -40,13 +40,12 @@
       <center>
 <h1 class="inicio">Laboratorios de quimica</h1> 
 <br><br>
-<?if (isset($_GET["errorusuario"]) && $_GET["errorusuario"]=="si"){?>
-<h4 class="error">Por favor ingrese los datos correctamente</h4>
+
 <p>
-<?}else{?>
+
 <h4 class="ingrese">Ingrese su Rut y contraseña</h4>
 <p>
-<?}?>
+
 </center>
 <form action="selector.php" method="POST">
 <table class ="init" border="0" align="center">
