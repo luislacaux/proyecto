@@ -1,5 +1,4 @@
 <?php
-
 function validarUsuario($usuario,$contrasena){
                 //$db=conectarDB();
                // $query = "select rut, contrasena from profesor where rut ='$usuario' AND contrasena = '$contrasena'";

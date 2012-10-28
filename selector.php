@@ -1,5 +1,5 @@
 <?php
-include ("./webservices/mysql.php");
+include ("mysql.php");
 include ("./webservices/validarusuarios.php");
 
 //Inicio la sesion 

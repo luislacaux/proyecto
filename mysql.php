@@ -1,15 +1,5 @@
-<?
+<?php
 
-function salir2(){
-	session_start();
-	session_destroy();
-	header ("Location: ../index.php");
-} 
-function salir(){ 
-	session_start();
-	session_destroy();
-	header ("Location: index.php");
-}
 function conectarDB(){
 	/* Database config */
 
