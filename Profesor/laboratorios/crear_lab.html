@@ -101,7 +101,59 @@
       </div>
     </div>
 
+    <div class="container-fluid">
+        
+        <center>
+                <table id="tabla_new_lab" class="table table-bordered">
+                  <tr>
+                  <th>Semestre:  </th>
+                  <td><select id="semestre">
+                        <option>1</option>
+                        <option>2</option>
+                      </select></td>
+                </tr>
+                <tr>
+                  <th>Periodo:  </th>
+                  <td><select id="periodo">
+                        <option val="1">I</option>
+                        <option val="2">II</option>
+                        <option val="3">III</option>
+                        <option val="4">IV</option>
+                        <option val="5">V</option>
+                        <option val="6">VI</option>
+                        <option val="7">VII</option>
+                      </select></td>
+                </tr>
+                <tr>
+                  <th>Grupo paralelo:  </th>
+                  <td><select id="grupo_par">
+                        <option val="1">1</option>
+                        <option val="2">2</option>
+                        <option val="3">3</option>
+                        <option val="4">4</option>
+                        <option val="5">5</option>
+                        <option val="6">6</option>
+                        <option val="7">7</option>
+                        <option val="8">8</option>
+                        <option val="9">9</option>
+                        <option val="10">10</option>
+                      </select></td>
+                </tr>
+                <tr>
+                  <th>Limite por grupo:  </th>
+                  <td><input id="limite" type='text'></td>
+                </tr>
+                <tr>
+                  <th>ID formulario:  </th>
+                  <td><input id="ID_form" type='text'></td>
+                </tr>
+                </table> 
+                </center>
+          
+        
+    </div>
     
+    <script type="text/javascript">$("selecciona_semestre").css({'width': 30});</script>
       
 
     <!-- Le javascript
