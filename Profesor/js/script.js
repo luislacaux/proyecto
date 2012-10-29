@@ -40,7 +40,8 @@ function guardar(e){
         }
     }
     console.log(preguntas);//productos es un array que contiene n arrays (n productos)
-    asdf($preguntas);
+    
+    asdf(preguntas);
     
  
    

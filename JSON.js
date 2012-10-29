@@ -5,7 +5,7 @@ var validaruser = function(id){
     dataType: "json",
     url: "webservices/validarusuario.php",
     success: function(data){
-       restultadouserz(data);
+       restultadouser(data);
      }
    });
   };
