@@ -21,6 +21,7 @@ function guardar(e){
     $("#result").empty();//limpiar la caja
     var preguntas = [];//un array que contendra a los arrays (filas o productos)
     var pregunta = [];//array para cada una de las filas 
+    var resultado = "";
     for (i=0;i<npreg;i++){//debe imprimer de 4 en 4 porque estan todos los inputs en un solo array
   
         $("#result").append(res[i].value);
