@@ -18,6 +18,7 @@
         padding-top: 60px;
         padding-bottom: 40px;
       }
+      .comboBox {width: 60px; height: 30px}
     </style>
 
   </head>
@@ -107,14 +108,14 @@
                 <table id="tabla_new_lab" class="table table-bordered">
                   <tr>
                   <th>Semestre:  </th>
-                  <td><select id="semestre">
+                  <td><select id="semestre" class="comboBox">
                         <option>1</option>
                         <option>2</option>
                       </select></td>
                 </tr>
                 <tr>
-                  <th>Periodo:  </th>
-                  <td><select id="periodo">
+                  <th class="combo">Periodo:  </th>
+                  <td><select id="periodo" class="comboBox">
                         <option val="1">I</option>
                         <option val="2">II</option>
                         <option val="3">III</option>
@@ -126,7 +127,7 @@
                 </tr>
                 <tr>
                   <th>Grupo paralelo:  </th>
-                  <td><select id="grupo_par">
+                  <td><select id="grupo_par" class="comboBoxS">
                         <option val="1">1</option>
                         <option val="2">2</option>
                         <option val="3">3</option>
