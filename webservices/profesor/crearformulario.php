@@ -1,18 +1,21 @@
-
 <?php
-include ("mysql.php");
+include ("../mysql.php");
+session_start();
 $idi = $_GET['id'];
 $id = (string) $idi; 
-echo $id+"asd";
-crearformulario($idi);
+$idArray = explode(",", $id);
+echo $idArray;
+//crearformulario($idi);
 function crearformulario($id){
     $db=conectarDB();
-    $largo = sizeof($id, $mode);
+    $largo = strlen($id);
     echo $largo+"";
-    $query = "INSERT
+   for ( $i = 0 ; $i <= 10 ; $i ++){
+    $query = "INSERT 
               INTO
-              VALUE";
+              VALUE()";
     $resQuery = mysql_query($query,$db) or die(mysql_error());
+    }
     //$row = mysql_fetch_row($resQuery);
     
     

@@ -45,22 +45,24 @@ function guardar(e){
     for(j=0;j<preguntas.length;j++){
         for (var k=0; k<3; k++) {
                 resultado = resultado + preguntas[j][k] +","
+                
            }
          
     }
 
     resultado = jQuery.trim(resultado).substring(0, resultado.length-1);
+    
  
     $(document).ready(function(){getPreguntas(resultado)});
     
 }
 
-var getPreguntas =function(data){
+var getPreguntas =function(id){
     $.ajax({
-    data: "preguntas="+data,
+    data: "preguntas="+id,
     type: "GET",
     dataType: "json",
-    url: "webservices/profesor/crearformulario.php",
+    url: "../../webservices/profesor/crearformulario.php",
     success: function(data){
        restultadoformulario(data);
      }
