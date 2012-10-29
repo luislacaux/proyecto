@@ -1,0 +1,60 @@
+<!doctype html> <!-- decirle al navegador que lo q viene es un documento html
+y por si usas html5 en tu doc -->
+<html>
+<head>
+<meta charset="utf-8"/>
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="script/index.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+<link href="js/prettify/prettify.css" rel="stylesheet">
+
+<style type="text/css">
+  body{
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<title>Química</title>
+
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="nav-collapse" style="height: 0p; ">
+        <ul class="nav">
+          <li id="crear" class="active"><a href="grupo.html">Crear grupo</a></li>
+          <li><a id="agregar" href="agregar_int.html">Agregar integrante</a></li>
+          <li><a id="rsp" href="laboratorios.html">Responder laboratorio</a></li> 
+          <li><a id="salir" href="index.html">Salir</a></li>             
+        </ul>
+       <!--/  <a class="btn btn-primary pull-right" href="http://twitter.github.com/bootstrap/">Twitter Bootstrap Home</a>-->
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+</div>
+
+<form class="form-horizontal">
+     <div class="control-group">
+        <input type="text" placeholder="RUT">
+        <button type="submit" class="btn"href="#"><i class="icon-plus"></i></butto>
+    </div>
+    <div class="control-group">
+        <button id="finalizar" type="submit" class="btn">Finalizar</button>
+    </div>
+</form>
+</body>
+</html>
