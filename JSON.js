@@ -1,15 +1,15 @@
-var getdetails = function(id){
+var validaruser = function(id){
   $.ajax({
     data: "id="+id,
     type: "GET",
     dataType: "json",
     url: "webservices/validarusuario.php",
     success: function(data){
-       restults(data);
+       restultadouserz(data);
      }
    });
   };
-var restults = function(data){
+var restultadouser = function(data){
        $("div.info").html("").show();
        $("div.info").append("Rut: "+data.rut);
        $("div.info").append("Contrasena: "+data.contrasena);

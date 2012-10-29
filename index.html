@@ -16,14 +16,12 @@
     <script>
        $(document).ready(function(){
        $("#boton").click(function(event){
-       getdetails( $("#rut").val()+" " +  $("#contrasena").val() )
+       validaruser( $("#rut").val()+" "+$("#contrasena").val() )
    });
  });
     
        
  </script>
-
-    <!-- Le styles -->
     <style type="text/css">
       body {
         padding-top: 40px;
@@ -36,7 +34,7 @@
 
   <body>
       <center>
-<h1 class="inicio">Laboratorios de quimica</h1> 
+<h1>Laboratorios de quimica</h1> 
 <br><br>
 
 <p>
@@ -47,8 +45,8 @@
 </center>
 
 <table class ="init" border="0" align="center">
-<tr><td>Rut:</td><td><input id="rut" size="25" value="" type="text"/></td></tr>
-<tr><td>Contraseña:</td><td><input id="contrasena" size="25" type="password"/></td></tr>
+<tr><td>Rut:</td><td><input id="rut" size="20" value="" type="text"/></td></tr>
+<tr><td>Contraseña:</td><td><input id="contrasena" size="20" type="password"/></td></tr>
 <tr><td><td><input type="button" id="boton" value="Iniciar Sesión" /></td></tr>
 </table>
 
