@@ -43,14 +43,14 @@ function guardar(e){
 
     for(j=0;j<preguntas.length;j++){
         for (var k=0; k<3; k++) {
-                resultado = resultado + "," + preguntas[j][k] +","
+                resultado = resultado + "," + preguntas[j][k]
            }
          
     }
 
-    resultado = jQuery.trim(resultado).substring(0, resultado.length-1);
+    //resultado = jQuery.trim(resultado).substring(0, resultado.length-1);
     
- 
+    //
     $(document).ready(function(){getPreguntas(resultado)});
     
 }
@@ -58,7 +58,7 @@ function guardar(e){
 var getPreguntas =function(id){
     $.ajax({
     data: "preguntas="+id,
-    type: "GET",
+    type: "POST",
     dataType: "json",
     url: "../../webservices/profesor/crearformulario.php",
     success: function(data){
@@ -69,10 +69,13 @@ var getPreguntas =function(id){
 }
 
 var restultadoformulario = function(data){
+       console.log(data.respuesta);
        $("div.info").html("").show();
        $("div.info").append("Respuesta: "+data.respuesta);
        if (data.respuesta == 1){
-           location.href='profesor/formulario/crear_formulario.html'; } 
+           alert("Formulario Creado con éxito");
+           location.href='../formularios/crear_formulario.html'; 
+            }
        else {
            $("div.info").append("no se pudo guardar");
        }
