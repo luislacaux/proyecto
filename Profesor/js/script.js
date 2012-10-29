@@ -51,8 +51,10 @@ function guardar(e){
 
     resultado = jQuery.trim(resultado).substring(0, resultado.length-1);
  
-   getPreguntas(resultado);
+    $(document).ready(function(){getPreguntas(resultado)});
+    
 }
+
 var getPreguntas =function(data){
     $.ajax({
     data: "preguntas="+data,
@@ -88,6 +90,7 @@ function eliminar(e){
 
 function iniciar(){
     //alert("Hola Jquery")
+    
     $("#newp").on("click",nuevo)//si dan click a #newp ejecutar nuevo
     $("#guardar").on("click",guardar)
 }
