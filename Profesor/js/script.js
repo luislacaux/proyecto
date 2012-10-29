@@ -41,12 +41,18 @@ function guardar(e){
     }
     console.log(preguntas);//productos es un array que contiene n arrays (n productos)
     
-    asdf(preguntas);
-    
+    for(j=0;j<preguntas.length;j++){
+        for (var k=0; k<3; k++) {
+                resultado = resultado + preguntas[j][k] +","
+           }
+         
+    }
+
+    resultado = jQuery.trim(resultado).substring(0, resultado.length-1);
  
-   
+   getPreguntas(resultado);
 }
-var asdf =function(data){
+var getPreguntas =function(data){
     $.ajax({
     data: "preguntas="+data,
     type: "GET",
