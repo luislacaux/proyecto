@@ -20,8 +20,8 @@
       }
       .comboBox {width: 60px; height: 30px}
       .textFields {width: 80px; height: 30px}
-      .celdaTh {width: 150px;}
-      .celdaTd {width: 150px;}
+      .celdaTabla {width: 300px;}
+      
     </style>
 
   </head>
@@ -108,17 +108,17 @@
     <div class="container">
         
         <center>
-                <table id="tabla_new_lab" class="table table-bordered">
+                <table id="tabla_new_lab" class="table table-bordered celdaTabla">
                   <tr>
-                      <th class="celdaTh"><center>Semestre:  </center></th>
-                  <td class="celdaTd"><center><select id="semestre" class="comboBox">
+                      <th><center>Semestre:  </center></th>
+                  <td><center><select id="semestre" class="comboBox">
                         <option>1</option>
                         <option>2</option>
                       </select></center></td>
                 </tr>
                 <tr>
-                  <th class="celdaTh"><center>Periodo:  </center></th>
-                  <td class="celdaTd"><center><select id="periodo" class="comboBox">
+                  <th><center>Periodo:  </center></th>
+                  <td><center><select id="periodo" class="comboBox">
                         <option val="1">I</option>
                         <option val="2">II</option>
                         <option val="3">III</option>
@@ -129,8 +129,8 @@
                       </select></center></td>
                 </tr>
                 <tr>
-                  <th class="celdaTh"><center>Grupo paralelo:  </center></th>
-                  <td class="celdaTd"><center><select id="grupo_par" class="comboBox">
+                  <th><center>Grupo paralelo:  </center></th>
+                  <td><center><select id="grupo_par" class="comboBox">
                         <option val="1">1</option>
                         <option val="2">2</option>
                         <option val="3">3</option>
@@ -144,12 +144,12 @@
                       </select></center></td>
                 </tr>
                 <tr>
-                  <th class="celdaTh"><center>Limite por grupo:  </center></th>
-                  <td class="celdaTd"><center><input id="limite" type='text' class="textFields"></center></td>
+                  <th><center>Limite por grupo:  </center></th>
+                  <td><center><input id="limite" type='text' class="textFields"></center></td>
                 </tr>
                 <tr>
-                  <th class="celdaTh"><center>ID formulario:  </center></th>
-                  <td class="celdaTd"><center><input id="ID_form" type='text' class="textFields"></center></td>
+                  <th><center>ID formulario:  </center></th>
+                  <td><center><input id="ID_form" type='text' class="textFields"></center></td>
                 </tr>
                 </table> 
                 </center>
