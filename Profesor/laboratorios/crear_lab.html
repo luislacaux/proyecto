@@ -18,6 +18,19 @@
         padding-top: 60px;
         padding-bottom: 40px;
       }
+      .opcionesSelect {
+        height: 30px;
+        overflow: auto;
+        width: 60px;
+      }
+      .celdas {
+        height: 30px;
+        overflow: hidden;
+        width: 150px;
+      }
+
+
+    
     </style>
 
   </head>
@@ -101,20 +114,20 @@
       </div>
     </div>
 
-    <div class="container-fluid">
+    <div class="container">
         
         <center>
                 <table id="tabla_new_lab" class="table table-bordered">
                   <tr>
-                  <th>Semestre:  </th>
-                  <td><select id="semestre">
+                  <th class="celdas"><center>Semestre:</center>  </th>
+                  <td class="celdas"><center><select id="semestre" class="opcionesSelect">
                         <option>1</option>
                         <option>2</option>
-                      </select></td>
+                      </select></center></td>
                 </tr>
-                <tr>
-                  <th>Periodo:  </th>
-                  <td><select id="periodo">
+                <tr><center>
+                  <th class="celdas"><center>Periodo:</center>  </th>
+                  <td class="celdas"><center><select id="periodo" class="opcionesSelect">
                         <option val="1">I</option>
                         <option val="2">II</option>
                         <option val="3">III</option>
@@ -122,39 +135,43 @@
                         <option val="5">V</option>
                         <option val="6">VI</option>
                         <option val="7">VII</option>
-                      </select></td>
+                      </select></center></td>
                 </tr>
                 <tr>
-                  <th>Grupo paralelo:  </th>
-                  <td><select id="grupo_par">
-                        <option val="1">1</option>
-                        <option val="2">2</option>
-                        <option val="3">3</option>
-                        <option val="4">4</option>
-                        <option val="5">5</option>
-                        <option val="6">6</option>
-                        <option val="7">7</option>
-                        <option val="8">8</option>
-                        <option val="9">9</option>
-                        <option val="10">10</option>
-                      </select></td>
+                  <th class="celdas"><center>Grupo paralelo:</center>  </th>
+                  <td  class="celdas">
+                    <center><select id="grupo_par" class="opcionesSelect">
+                      <option val="1">1</option>
+                      <option val="2">2</option>
+                      <option val="3">3</option>
+                      <option val="4">4</option>
+                      <option val="5">5</option>
+                      <option val="6">6</option>
+                      <option val="7">7</option>
+                      <option val="8">8</option>
+                      <option val="9">9</option>
+                      <option val="10">10</option>
+                    </select></center></td>
                 </tr>
                 <tr>
-                  <th>Limite por grupo:  </th>
-                  <td><input id="limite" type='text'></td>
+                  <th class="celdas"><center>Limite por grupo:</center>  </th>
+                  <td class="celdas"><center><input id="limite" type='text'></center></td>
                 </tr>
-                <tr>
-                  <th>ID formulario:  </th>
-                  <td><input id="ID_form" type='text'></td>
+                <tr class="celdas">
+                  <th class="celdas"><center>ID formulario:</center>  </th>
+                  <td class="celdas"><center><input id="ID_form" type='text'></center></td>
                 </tr>
                 </table> 
                 </center>
-          
+        <center><input type="submit" id="guardar_lab" class="btn btn-success" value="Guardar Laboratorio" /></center> 
         
     </div>
     
-    <script type="text/javascript">$("selecciona_semestre").css({'width': 30});</script>
-      
+    <script type="text/javascript">
+
+       $(document).ready(function(){ $('grupo_par').css('width', 20)})
+
+    </script>
 
     <!-- Le javascript
     ================================================== -->
