@@ -4,8 +4,7 @@ session_start();
 $idi = $_POST['preguntas'];
 $id = (string) $idi; 
 $idArray = explode(",", $id);
-//$jsondata['respuesta'] = $idArray;
-    //echo json_encode($jsondata);
+
 crearformulario($idArray);
 
 
@@ -31,11 +30,5 @@ function crearformulario($id){
     }
         $jsondata['respuesta'] = 1;
         echo json_encode($jsondata);
-        
-    
-    
-    
-    
-    
 }
 ?>

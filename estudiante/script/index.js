@@ -11,6 +11,7 @@ $(function(){
 	
 	$('#crear').click(function(){
 		$('#contenedor').load('grupo.html');
+		
 	});
 
 	$('#agregar').click(function(){
@@ -18,6 +19,10 @@ $(function(){
 	});
 
 	$('#rsp').click(function(){
-		$('contenedor').load('responder.html')
+		$('contenedor').load('laboratorios.html');
+	});
+
+	$('#ir1').click(function(){
+		$('contenedor').load('responder.html');
 	});
 });

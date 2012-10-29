@@ -7,7 +7,11 @@ y por si usas html5 en tu doc -->
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="script/index.js"></script>
+<script type="text/javascript" src="js/mostrar.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--<script src="http://code.jquery.com/jquery-latest.js"></script>-->
+
 <link href="css/bootstrap-responsive.css" rel="stylesheet">
 
 <link href="css/bootstrap.css" rel="stylesheet">
@@ -22,6 +26,7 @@ y por si usas html5 en tu doc -->
   }
 </style>
 
+
 <title>Química</title>
 
 </head>
@@ -34,6 +39,7 @@ y por si usas html5 en tu doc -->
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+      <a class="brand">Laboratorio Química</a>
       <div class="nav-collapse" style="height: 0p; ">
         <ul class="nav">
           <li id="crear" class="active"><a href="grupo.html">Crear grupo</a></li>
@@ -49,21 +55,32 @@ y por si usas html5 en tu doc -->
 
 <h5>Agregue estudiantes a su grupos</h5>
 <form class="form-horizontal">
-    <div class="control-group">
+    <div id="div1" class="control-group">
         <input type="text" placeholder="RUT">
-        <button type="submit" class="btn"href="#"><i class="icon-plus"></i></button>
+        <a class="btn" id="mas1" href="#">
+            <i class="icon-plus"></i>
+        </a>
     </div>
-    <div class="control-group">
+    <div id="div2" class="control-group">
         <input type="text" placeholder="RUT">
-        <button type="submit" class="btn"href="#"><i class="icon-plus"></i></button>
+        <a>
+       <a class="btn" id="mas2" href="#">
+            <i class="icon-plus"></i>
+        </a>
     </div>
-    <div class="control-group">
+    <div id="div3" class="control-group">
         <input type="text" placeholder="RUT">
-        <button type="submit" class="btn"href="#"><i class="icon-plus"></i></button>
+        <a class="btn" id="mas3" href="#">
+            <i class="icon-plus"></i>
+        </a>
     </div>
     <div class="control-group">
         <button id="finalizar" type="submit" class="btn">Finalizar</button>
     </div>
 </form>
+
+
+
+
 </body>
 </html>
