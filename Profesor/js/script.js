@@ -40,9 +40,30 @@ function guardar(e){
         }
     }
     console.log(preguntas);//productos es un array que contiene n arrays (n productos)
-
+    
+    $.ajax({
+    data: "preguntas="+preguntas,
+    type: "GET",
+    dataType: "json",
+    url: "webservices/crearformulario.php",
+    success: function(data){
+       restultadoformulario(data);
+     }
+   });
+ 
    
 }
+
+var restultadoformulario = function(data){
+       $("div.info").html("").show();
+       $("div.info").append("Respuesta: "+data.respuesta);
+       if (data.respuesta == 1){
+           location.href='profesor/formulario/crear_formulario.html'; } 
+       else {
+           $("div.info").append("no se pudo guardar");
+       }
+      
+  };
 
 function eliminar(e){
     $(e).parent().parent().fadeOut(400).remove();
