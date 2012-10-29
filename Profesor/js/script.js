@@ -45,7 +45,7 @@ function guardar(e){
     data: "preguntas="+preguntas,
     type: "GET",
     dataType: "json",
-    url: "webservices/crearformulario.php",
+    url: "webservices/profesor/crearformulario.php",
     success: function(data){
        restultadoformulario(data);
      }
