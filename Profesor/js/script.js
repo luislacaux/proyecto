@@ -40,9 +40,14 @@ function guardar(e){
         }
     }
     console.log(preguntas);//productos es un array que contiene n arrays (n productos)
+    asdf($preguntas);
     
+ 
+   
+}
+var asdf =function(data){
     $.ajax({
-    data: "preguntas="+preguntas,
+    data: "preguntas="+data,
     type: "GET",
     dataType: "json",
     url: "webservices/profesor/crearformulario.php",
@@ -50,8 +55,7 @@ function guardar(e){
        restultadoformulario(data);
      }
    });
- 
-   
+    
 }
 
 var restultadoformulario = function(data){
