@@ -12,13 +12,29 @@ function validarUsuario($idArray){
                $db=conectarDB();
                $rut = (string) $idArray[0];
                $contrasena = (string) $idArray[1];
-               $query = "select rut from estudiante where rut ='$rut'";
-	       $resQuery = mysql_query($query,$db) or die(mysql_error());
-               $row = mysql_fetch_row($resQuery);
-               $jsondata['rut'] = $row[0];
-               $jsondata['contrasena'] = $row->contrasena;
-               $jsondata['rut_ingresado'] = $rut;
-               echo json_encode($jsondata);
+               $var = mysql_query("select tipo_rut('$rut')",$db);
+               $row = mysql_fetch_row($var);
+               if($row[0] == "PROFESOR"){
+                     $jsondata['tipo']="PROFESOR";
+                     $jsondata['rut'] = $row[0];
+                     $jsondata['contrasena'] = $row->contrasena;
+                     $jsondata['rut_ingresado'] = $rut;
+                      echo json_encode($jsondata);
+                   
+                   
+               }else{
+                   if($row[0]=="ESTUDIANTE"){
+                       $jsondata['tipo']="ESTUDIANTE";
+                       $jsondata['rut'] = $row[0];
+                       echo json_encode($jsondata);
+                       
+                   }
+                   
+               }
+              // $query = "select rut from estudiante where rut ='$rut'";
+	      // $resQuery = mysql_query($query,$db) or die(mysql_error());
+               
+             
    
 		
 	}
