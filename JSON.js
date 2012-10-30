@@ -1,7 +1,7 @@
 var validaruser = function(id){
   $.ajax({
     data: "id="+id,
-    type: "GET",
+    type: "POST",
     dataType: "json",
     url: "webservices/validarusuario.php",
     success: function(data){
@@ -12,15 +12,18 @@ var validaruser = function(id){
 var restultadouser = function(data){
        $("div.info").html("").show();
        $("div.info").append("tipo: "+data.tipo);
-       $("div.info").append("Rut: "+data.rut);
        $("div.info").append("Contrasena: "+data.contrasena);
-      
+        var asd= data.tipo;
+        console.log(asd);
        if (data.tipo == "PROFESOR"){
+         //console.log("prof");
            location.href='profesor/index.html'; } 
        else {
            if(data.tipo=="ESTUDIANTE"){
+//console.log("estu");
                location.href='estudiante/index.html';
            }
+ //console.log(asd);
            $("div.info").append("El rut no es correcto");
        }
       
@@ -31,4 +34,3 @@ var restultadouser = function(data){
   function cierra(){
 window.close();
 }
-
