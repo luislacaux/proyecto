@@ -1,3 +1,4 @@
+
 <?php
 include ("mysql.php");
 
@@ -12,34 +13,38 @@ function validarUsuario($idArray){
                $link = mysql_connect("localhost", "root", "taller");
                mysql_select_db("quimica");
                $rut = (string) $idArray[0];
-		 $contrasena = (string) $idArray[1];
+	        $contrasena = (string) $idArray[1];
+               $pass = "AES_ENCRYPT($contrasena,'llave_quimica')";
                $query = "select tipo_rut('$rut')";
                $result = mysql_query($query);
                $prof = "PROFESOR";
-		 $est = "ESTUDIANTE";
+	       $est = "ESTUDIANTE";
                $line = mysql_fetch_row($result);
                $line2 = (string) $line[0];
-              $jsondata['tipo']=$line2;
-		echo json_encode($jsondata);
-               /* if($line2 == $prof){
-			// aquí se debe verificar la pass y el rut nuevamente.
-			//$query2 = "select tipo_rut('$rut')";
-                     //$result2 = mysql_query($query2);
-
-                     $jsondata['tipo']="PROFESOR";
-                     echo json_encode($jsondata);
-                   	mysql_close($link);
-                   
-               }else{
-                   if($line2 == $est){
-                       $jsondata['tipo']="ESTUDIANTE";
+               
+               if( strcmp($line2, $prof) ==0){
+	            $query2 = "select acceso_profesor('$rut','$pass')";
+		    $result2 = mysql_query($query2);
+		    $line3 = mysql_fetch_array($result2);
+                  if((string)$line3[0] == "OK"){                       
+                        $jsondata['tipo']="OK";
+                        echo json_encode($jsondata);
+                  }elseif ((string)$line3[0] == 'NO'){
+                        
+                        $jsondata['tipo']="NO";
+                        echo json_encode($jsondata);
+            
+                     }
+                 
+               }elseif(strcmp($line2, $est) ==0){
+                       $jsondata['tipo']=$line2;
                        echo json_encode($jsondata);
-                       mysql_close($link);
-                   }
-		     $jsondata['tipo']="NO";
+                       
+               }elseif(strcmp($line2, "NO") ==0){
+		     $jsondata['tipo']=$line2;
 		     echo json_encode($jsondata);
-                   mysql_close($link);
-               }*/
+                  
+               }
                 mysql_close($link);
                 
 		
