@@ -1,3 +1,8 @@
+<?php
+require("../../webservices/securityprof.php");
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,9 +14,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="js/prettify/prettify.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="../js/prettify/prettify.css" rel="stylesheet">
 
 
     <!-- Le styles -->
@@ -39,7 +44,7 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li>
-                <a href="index.html">Inicio</a>
+                <a href="../index.html">Inicio</a>
               </li>
               <ul class="nav">
                   <li class="dropdown">  
@@ -47,8 +52,8 @@
                       <b class="caret"></b>  
                     </a>  
                     <ul class="dropdown-menu"> 
-                          <li><a href="laboratorios/crear_lab.html">Nuevo laboratorio</a></li>  
-                          <li><a href="laboratorios/labs_realizados.html">Laboratorios realizados</a></li>  
+                          <li><a href="../laboratorios/crear_lab.html">Nuevo laboratorio</a></li>  
+                          <li><a href="../laboratorios/labs_realizados.html">Laboratorios realizados</a></li>  
                     </ul>  
                   </li> 
                </ul>
@@ -58,8 +63,8 @@
                       <b class="caret"></b>  
                     </a>  
                     <ul class="dropdown-menu"> 
-                          <li><a href="formularios/crear_formulario.html">Crear formulario</a></li>  
-                          <li><a href="formularios/lista_formularios.html">Ver lista de formularios</a></li>  
+                          <li><a href="../formularios/crear_formulario.html">Crear formulario</a></li>  
+                          <li><a href="../formularios/lista_formularios.html">Ver lista de formularios</a></li>  
                     </ul>  
                   </li> 
                </ul>          
@@ -69,8 +74,8 @@
                       <b class="caret"></b>  
                     </a>  
                     <ul class="dropdown-menu"> 
-                          <li><a href="estudiantes/subir_lista.html">Subir lista estudiantes</a></li>  
-                          <li><a href="estudiantes/resumen.html">Ver resumen</a></li>  
+                          <li><a href="../estudiantes/subir_lista.html">Subir lista estudiantes</a></li>  
+                          <li><a href="../estudiantes/resumen.html">Ver resumen</a></li>  
                     </ul>  
                   </li> 
                </ul>
@@ -80,22 +85,22 @@
                       <b class="caret"></b>  
                     </a>  
                     <ul class="dropdown-menu"> 
-                          <li><a href="estadisticas/estadisticas_notas.html">De notas</a></li>  
-                          <li><a href="estadisticas/estadisticas_asistencia.html">De asistencia</a></li>  
-                          <li><a href="estadisticas/estadisticas_errores.html">De errores</a></li> 
+                          <li><a href="../estadisticas/estadisticas_notas.html">De notas</a></li>  
+                          <li><a href="../estadisticas/estadisticas_asistencia.html">De asistencia</a></li>  
+                          <li><a href="../estadisticas/estadisticas_errores.html">De errores</a></li> 
                     </ul>  
                   </li> 
                </ul>         
               <li>
                 <li>
-                <a href="agregar_profesor/nuevo_profesor.html">Agregar profesor</a>
+                <a href="../agregar_profesor/nuevo_profesor.html">Agregar profesor</a>
               </li>    
               <li>
                 <li>
-                <a href="datos/mis_datos.html">Mis datos</a>
+                <a href="../datos/mis_datos.html">Mis datos</a>
               </li>    
               <li>
-                <a href="../index.html">Salir</a>
+                <a href="login.html">Salir</a>
               </li>           
             </ul>
            <!--/  <a class="btn btn-primary pull-right" href="http://twitter.github.com/bootstrap/">Twitter Bootstrap Home</a>-->
@@ -120,9 +125,9 @@
 
   </body>
 
-  <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-  <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="../js/bootstrap-dropdown.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/bootstrap.js"></script>
 
 </html>

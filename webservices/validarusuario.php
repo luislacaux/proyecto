@@ -23,6 +23,7 @@ function validarUsuario($idArray){
                $line2 = (string) $line[0];
                
                if( strcmp($line2, $prof) ==0){
+                    $_SESSION["autenticadoprof"]= "SI";
 	            $query2 = "select acceso_profesor('$rut','$pass')";
 		    $result2 = mysql_query($query2);
 		    $line3 = mysql_fetch_array($result2);
@@ -37,6 +38,7 @@ function validarUsuario($idArray){
                      }
                  
                }elseif(strcmp($line2, $est) ==0){
+                       $_SESSION["autenticadoest"]= "SI";
                        $jsondata['tipo']=$line2;
                        echo json_encode($jsondata);
                        

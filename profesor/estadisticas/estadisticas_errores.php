@@ -1,10 +1,14 @@
+<?php
+require("../../webservices/securityprof.php");
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <title>Formulario de Quimica</title>
-    
-
+   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -22,7 +26,17 @@
       }
     </style>
 
-    
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements 
+          - updated in Bootstrap 2.02 to include the http: -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <!--<link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">-->
   </head>
 
   <body>
@@ -104,25 +118,43 @@
       </div>
     </div>
 
-    <div class="container-fluid">
+    <!--/<div class="container-fluid">
 
-      <div class="row-fluid">
-        <div class="span12">
-          <center>
-            <img src="img/fotografia.jpg">
-            <p>Patricio Ruiz-Tagle</p>
-          </center>
+     <!--/ <div class="row-fluid">
+        <div class="span4">
+          <h2>Setup Notes</h2>
+           <p>Get your markup, CSS, and JavaScript organized and linked up!</p>
+          <center><p><a class="btn" href="setup-notes.html">Go there &raquo;</a></p></center>
         </div>
-      </div><!-- end row 1 -->
+        <div class="span4">
+          <h2>Navbar Examples</h2>
+           <p>Suggestions and code for three ways to setup your navbar:</p>
+            <ul>
+              <li>fixed-top</li>
+              <li>static full-width</li>
+              <li>static inside container</li>
+            </ul>
+          <p><a class="btn" href="navbar-examples.html">Go there &raquo;</a></p>
+       </div>
+        <div class="span4">
+          <h2>Next Up: Tabs & Pills</h2>
+          <p>Coming soon!</p>
+        </div>
+      </div><!-- end row 1 
+
+
+      
+
 
     </div> <!-- /container -->
-    
 
-  </body>
-
-  <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
   <script type="text/javascript" src="../js/bootstrap-dropdown.js"></script>
   <script src="../js/bootstrap.min.js"></script>
   <script src="../js/bootstrap.js"></script>
 
+  </body>
 </html>

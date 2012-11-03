@@ -1,10 +1,14 @@
+<?php
+require("../../webservices/securityprof.php");
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <title>Formulario de Quimica</title>
-    <
-
+   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -114,21 +118,35 @@
       </div>
     </div>
 
-    <div class="container-fluid">
+    <!--/<div class="container-fluid">
+
+     <!--/ <div class="row-fluid">
+        <div class="span4">
+          <h2>Setup Notes</h2>
+           <p>Get your markup, CSS, and JavaScript organized and linked up!</p>
+          <center><p><a class="btn" href="setup-notes.html">Go there &raquo;</a></p></center>
+        </div>
+        <div class="span4">
+          <h2>Navbar Examples</h2>
+           <p>Suggestions and code for three ways to setup your navbar:</p>
+            <ul>
+              <li>fixed-top</li>
+              <li>static full-width</li>
+              <li>static inside container</li>
+            </ul>
+          <p><a class="btn" href="navbar-examples.html">Go there &raquo;</a></p>
+       </div>
+        <div class="span4">
+          <h2>Next Up: Tabs & Pills</h2>
+          <p>Coming soon!</p>
+        </div>
+      </div><!-- end row 1 
+
+
       
-          <center>
-            <h3>Laboratorio N°1</h3>
-            <p><a class="btn" href="setup-notes.html">IR &raquo;</a></p>
-         
 
-            <h3>Laboratorio N°2</h3>
-            <p><a class="btn" href="setup-notes.html">IR &raquo;</a></p>
-     
-            
-            <p><h3>Laboratorio N°3</h3><a class="btn" href="setup-notes.html">IR &raquo;</a></p>
-        </center>
 
-   </div> <!-- /container -->
+    </div> <!-- /container -->
 
     <!-- Le javascript
     ================================================== -->

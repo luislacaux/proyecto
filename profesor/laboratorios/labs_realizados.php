@@ -1,9 +1,14 @@
+<?php
+require("../../webservices/securityprof.php");
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <title>Formulario de Quimica</title>
-    
+    <
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -116,41 +121,27 @@
 
     <div class="container-fluid">
       
-    <fieldset>
-      <legend>Nombre:   <input type="text" id="nombre_formulario"></legend>
-    </fieldset>
+          <center>
+            <h3>Laboratorio N°1</h3>
+            <p><a class="btn" href="setup-notes.html">IR &raquo;</a></p>
+         
 
-    <div id="container">
-        <form id="f" name="f">
-            <table id="tablaUsuarios" class="table table-bordered" >
-                <tr>
-                    <th >Pregunta</th>
-                    <th >Solución </th>
-                    <th >Unidad</th>
-                </tr>
-            </table>
-            <div id="botones" class="centrar">
-                <input type="submit" id="guardar" class="btn btn-success" value="Guardar Formulario" />
-                <input type="button" id="newp" class="btn btn-primary" value="A&ntilde;adir pregunta" />
-            </div>
-            
-
-        </form>
-    </div>
+            <h3>Laboratorio N°2</h3>
+            <p><a class="btn" href="setup-notes.html">IR &raquo;</a></p>
      
+            
+            <p><h3>Laboratorio N°3</h3><a class="btn" href="setup-notes.html">IR &raquo;</a></p>
+        </center>
 
-
-      
-
+   </div> <!-- /container -->
 
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
-    <script type="text/javascript" src="../js/bootstrap-dropdown.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/bootstrap.js"></script>
-    <script type="text/javascript" src="../js/crear_formulario.js"></script>
+  <script type="text/javascript" src="../js/bootstrap-dropdown.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/bootstrap.js"></script>
 
   </body>
 </html>

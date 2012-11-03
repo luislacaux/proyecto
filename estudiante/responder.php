@@ -1,3 +1,8 @@
+<?php
+require("../webservices/securityest.php");
+session_start();
+
+?>
 <!doctype html> <!-- decirle al navegador que lo q viene es un documento html
 y por si usas html5 en tu doc -->
 <html>

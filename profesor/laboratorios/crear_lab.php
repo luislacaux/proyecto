@@ -1,9 +1,15 @@
+<?php
+require("../../webservices/securityprof.php");
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <title>Formulario de Quimica</title>
    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -12,31 +18,22 @@
     <link href="../css/bootstrap-responsive.css" rel="stylesheet">
     <link href="../js/prettify/prettify.css" rel="stylesheet">
 
-
-    <!-- Le styles -->
     <style type="text/css">
       body {
         padding-top: 60px;
         padding-bottom: 40px;
       }
+      .comboBox {width: 60px; height: 30px}
+      .textFields {width: 80px; height: 30px}
+      .celdaTabla {width: 300px;}
+      
     </style>
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements 
-          - updated in Bootstrap 2.02 to include the http: -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <!-- Le fav and touch icons -->
-    <!--<link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">-->
   </head>
 
   <body>
 
-    <div class="navbar navbar-fixed-top">
+  <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -113,43 +110,70 @@
       </div>
     </div>
 
-    <!--/<div class="container-fluid">
+    <div class="container">
+        
+        <center>
+                <table id="tabla_new_lab" class="table table-bordered celdaTabla">
+                  <tr>
+                      <th><center>Semestre:  </center></th>
+                  <td><center><select id="semestre" class="comboBox">
+                        <option>1</option>
+                        <option>2</option>
+                      </select></center></td>
+                </tr>
+                <tr>
+                  <th><center>Periodo:  </center></th>
+                  <td><center><select id="periodo" class="comboBox">
+                        <option val="1">I</option>
+                        <option val="2">II</option>
+                        <option val="3">III</option>
+                        <option val="4">IV</option>
+                        <option val="5">V</option>
+                        <option val="6">VI</option>
+                        <option val="7">VII</option>
+                      </select></center></td>
+                </tr>
+                <tr>
+                  <th><center>Grupo paralelo:  </center></th>
+                  <td><center><select id="grupo_par" class="comboBox">
+                        <option val="1">1</option>
+                        <option val="2">2</option>
+                        <option val="3">3</option>
+                        <option val="4">4</option>
+                        <option val="5">5</option>
+                        <option val="6">6</option>
+                        <option val="7">7</option>
+                        <option val="8">8</option>
+                        <option val="9">9</option>
+                        <option val="10">10</option>
+                      </select></center></td>
+                </tr>
+                <tr>
+                  <th><center>Limite por grupo:  </center></th>
+                  <td><center><input id="limite" type='text' class="textFields"></center></td>
+                </tr>
+                <tr>
+                  <th><center>ID formulario:  </center></th>
+                  <td><center><input id="ID_form" type='text' class="textFields"></center></td>
+                </tr>
+                </table> 
+                </center>
+          
+        
+    </div>
+    
+  <center> <input type="submit" id="guardar_lab" class="btn btn-success" value="Guardar Laboratorio" /> </center>
 
-     <!--/ <div class="row-fluid">
-        <div class="span4">
-          <h2>Setup Notes</h2>
-           <p>Get your markup, CSS, and JavaScript organized and linked up!</p>
-          <center><p><a class="btn" href="setup-notes.html">Go there &raquo;</a></p></center>
-        </div>
-        <div class="span4">
-          <h2>Navbar Examples</h2>
-           <p>Suggestions and code for three ways to setup your navbar:</p>
-            <ul>
-              <li>fixed-top</li>
-              <li>static full-width</li>
-              <li>static inside container</li>
-            </ul>
-          <p><a class="btn" href="navbar-examples.html">Go there &raquo;</a></p>
-       </div>
-        <div class="span4">
-          <h2>Next Up: Tabs & Pills</h2>
-          <p>Coming soon!</p>
-        </div>
-      </div><!-- end row 1 
-
-
+  
       
-
-
-    </div> <!-- /container -->
 
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
-  <script type="text/javascript" src="../js/bootstrap-dropdown.js"></script>
-  <script src="../js/bootstrap.min.js"></script>
-  <script src="../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-dropdown.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
 
   </body>
 </html>

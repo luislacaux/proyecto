@@ -1,3 +1,8 @@
+<?php
+require("../webservices/securityest.php");
+session_start();
+
+?>
 <!doctype html> <!-- decirle al navegador que lo q viene es un documento html
 y por si usas html5 en tu doc -->
 <html>
@@ -25,6 +30,7 @@ y por si usas html5 en tu doc -->
 <title>Química</title>
 
 </head>
+
 <body>
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
@@ -48,14 +54,12 @@ y por si usas html5 en tu doc -->
   </div>
 </div>
 
-<form class="form-horizontal">
-     <div class="control-group">
-        <input type="text" placeholder="RUT">
-        <button type="submit" class="btn"href="#"><i class="icon-plus"></i></butto>
-    </div>
-    <div class="control-group">
-        <button id="finalizar" type="submit" class="btn">Finalizar</button>
-    </div>
-</form>
+
+<div id="contenedor" class="container-fluid">
+ 	<div class="row-fluid">
+ 		<div class="span12">
+
+ 		</div> 
+</div><!-- end row 1 -->
 </body>
 </html>
