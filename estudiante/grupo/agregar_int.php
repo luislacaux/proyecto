@@ -1,5 +1,5 @@
 <?php
-require("../webservices/securityest.php");
+require("../../webservices/securityprof.php");
 session_start();
 
 ?>
@@ -30,7 +30,6 @@ y por si usas html5 en tu doc -->
 <title>Química</title>
 
 </head>
-
 <body>
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
@@ -55,17 +54,12 @@ y por si usas html5 en tu doc -->
 </div>
 
 <form class="form-horizontal">
-    <div class="control-group">
-     	<span>Laboratorio 1</span>
-        <button id="ir1" type="submit" class="btn">Ir</button>
+     <div class="control-group">
+        <input type="text" placeholder="RUT">
+        <button type="submit" class="btn"href="#"><i class="icon-plus"></i></butto>
     </div>
     <div class="control-group">
-    	<span>Laboratorio 2</span>
-        <button id="ir2" type="submit" class="btn">Ir</button>
-    </div>
-    <div class="control-group">
-      <span>Laboratorio 3</span>
-      <button id="ir3" type="submit" class="btn">Ir</button>
+        <button id="finalizar" type="submit" class="btn">Finalizar</button>
     </div>
 </form>
 </body>

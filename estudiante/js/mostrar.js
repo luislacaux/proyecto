@@ -1,6 +1,6 @@
 $(document).ready(function(){
-  $("#div2").hide();
-  $("#div3").hide();
+  $("#div2").hide('fast');
+  $("#div3").hide('fast');
   $('a#mas1').click(function(){
     $("#div2").show('slow');
     

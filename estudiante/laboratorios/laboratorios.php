@@ -1,8 +1,9 @@
 <?php
-require("../webservices/securityest.php");
+require("../../webservices/securityprof.php");
 session_start();
 
 ?>
+
 <!doctype html> <!-- decirle al navegador que lo q viene es un documento html
 y por si usas html5 en tu doc -->
 <html>
@@ -56,17 +57,16 @@ y por si usas html5 en tu doc -->
 
 <form class="form-horizontal">
     <div class="control-group">
-     	<span>Enunciado 1</span>
-     	<input id="resp" type="text" placeholder="Respuesta">
-     	<span>Gramos</span>
+     	<span>Laboratorio 1</span>
+        <button id="ir1" type="submit" class="btn">Ir</button>
     </div>
     <div class="control-group">
-      <span>Enunciado 2</span>
-      <input id="resp" type="text" placeholder="Respuesta">
-      <span>Gramos</span>
+    	<span>Laboratorio 2</span>
+        <button id="ir2" type="submit" class="btn">Ir</button>
     </div>
     <div class="control-group">
-        <button id="enviar" type="submit" class="btn">Enviar</button>
+      <span>Laboratorio 3</span>
+      <button id="ir3" type="submit" class="btn">Ir</button>
     </div>
 </form>
 </body>

@@ -1,5 +1,5 @@
 <?php
-require("../webservices/securityest.php");
+require("../../webservices/securityprof.php");
 session_start();
 
 ?>
@@ -12,11 +12,7 @@ y por si usas html5 en tu doc -->
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="script/index.js"></script>
-<script type="text/javascript" src="js/mostrar.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!--<script src="http://code.jquery.com/jquery-latest.js"></script>-->
-
 <link href="css/bootstrap-responsive.css" rel="stylesheet">
 
 <link href="css/bootstrap.css" rel="stylesheet">
@@ -31,10 +27,10 @@ y por si usas html5 en tu doc -->
   }
 </style>
 
-
 <title>Química</title>
 
 </head>
+
 <body>
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
@@ -58,34 +54,20 @@ y por si usas html5 en tu doc -->
   </div>
 </div>
 
-<h5>Agregue estudiantes a su grupos</h5>
 <form class="form-horizontal">
-    <div id="div1" class="control-group">
-        <input type="text" placeholder="RUT">
-        <a class="btn" id="mas1" href="#">
-            <i class="icon-plus"></i>
-        </a>
-    </div>
-    <div id="div2" class="control-group">
-        <input type="text" placeholder="RUT">
-        <a>
-       <a class="btn" id="mas2" href="#">
-            <i class="icon-plus"></i>
-        </a>
-    </div>
-    <div id="div3" class="control-group">
-        <input type="text" placeholder="RUT">
-        <a class="btn" id="mas3" href="#">
-            <i class="icon-plus"></i>
-        </a>
+    <div class="control-group">
+     	<span>Enunciado 1</span>
+     	<input id="resp" type="text" placeholder="Respuesta">
+     	<span>Gramos</span>
     </div>
     <div class="control-group">
-        <button id="finalizar" type="submit" class="btn">Finalizar</button>
+      <span>Enunciado 2</span>
+      <input id="resp" type="text" placeholder="Respuesta">
+      <span>Gramos</span>
+    </div>
+    <div class="control-group">
+        <button id="enviar" type="submit" class="btn">Enviar</button>
     </div>
 </form>
-
-
-
-
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?php
-require("../webservices/securityprof.php");
+require("../../webservices/securityprof.php");
 session_start();
 
 ?>
@@ -9,19 +9,23 @@ y por si usas html5 en tu doc -->
 <head>
 <meta charset="utf-8"/>
 
-<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="js/bootstrap-dropdown.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.js"></script>
-<script type="text/javascript" src="script/index.js"></script>
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="css/bootstrap-responsive.css" rel="stylesheet">
 
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<!--<script src="http://code.jquery.com/jquery-latest.js"></script>-->
 
-<link href="js/prettify/prettify.css" rel="stylesheet">
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap-dropdown.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.js"></script>
+<script type="text/javascript" src="../script/index.js"></script>
+<script type="text/javascript" src="../js/mostrar.js"></script>
+
+<link href="../css/bootstrap-responsive.css" rel="stylesheet">
+
+<link href="../css/bootstrap.css" rel="stylesheet">
+<link href="../css/bootstrap-responsive.css" rel="stylesheet">
+
+<link href="../js/prettify/prettify.css" rel="stylesheet">
 
 <style type="text/css">
   body{
@@ -30,12 +34,11 @@ y por si usas html5 en tu doc -->
   }
 </style>
 
+
 <title>Química</title>
 
 </head>
-
 <body>
-
 <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -72,17 +75,41 @@ y por si usas html5 en tu doc -->
               </li>           
             </ul>
 
-<div class="container-fluid">
-
-      <div class="row-fluid">
-        <div class="span12">
-          
+           <!--/  <a class="btn btn-primary pull-right" href="http://twitter.github.com/bootstrap/">Twitter Bootstrap Home</a>-->
+          <!--</div><!--/.nav-collapse-->
         </div>
-      </div><!-- end row 1 -->
+      </div>
+    </div>
 
-    </div> <!-- /container -->
+<div class="container-fluid">
+  <h5>Agregue estudiantes a su grupos</h5>
+  <form class="form-horizontal">
+      <div id="div1" class="control-group">
+          <input class="span2" type="text" placeholder="RUT">
+          <a class="btn" id="mas1" href="#">
+              <i class="icon-plus"></i>
+          </a>
+      </div>
+      <div id="div2" class="control-group">
+          <input class="span2" type="text" placeholder="RUT">
+          <a>
+         <a class="btn" id="mas2" href="#">
+              <i class="icon-plus"></i>
+          </a>
+      </div>
+      <div id="div3" class="control-group">
+          <input class="span2" type="text" placeholder="RUT">
+          <a class="btn" id="mas3" href="#">
+              <i class="icon-plus"></i>
+          </a>
+      </div>
+      <div class="control-group">
+          <button id="finalizar" type="submit" class="btn">Finalizar</button>
+      </div>
+    </div>
+</form>
+
+
+
 </body>
-
-
-
 </html>
