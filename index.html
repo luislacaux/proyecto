@@ -1,3 +1,6 @@
+<?php
+ $var = "llave_quimica";
+?>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -16,7 +19,8 @@
     <script>
        $(document).ready(function(){
        $("#boton").click(function(event){
-       validaruser( $("#rut").val()+" "+$("#contrasena").val() )
+           //EAS_ENCRYPT('',$var.val());
+           validaruser( $("#rut").val()+" "+$("#contrasena").val() )
    });
  });
     
