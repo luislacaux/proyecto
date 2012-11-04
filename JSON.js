@@ -17,11 +17,11 @@ var restultadouser = function(data){
         //console.log(asd);
        if (data.tipo == "OK"){
          //console.log("prof");
-           location.href='profesor/index.html'; } 
+           location.href='profesor/index.php'; } 
        else {
            if(data.tipo=="ESTUDIANTE"){
            //console.log("estu");
-               location.href='estudiante/index.html';
+               location.href='estudiante/index.php';
            }
            //console.log(asd);
            $("div.info").append("El rut no es correcto");

@@ -25,6 +25,12 @@ session_start();
         padding-top: 60px;
         padding-bottom: 40px;
       }
+      .anio {width: 80px;}
+      .sems {width: 60px;}
+      .botonfecha {height: 30px;
+                   width:   300px;}
+      .boton_crear_lab {height: 80px;
+                        width: 80px;}
     </style>
 
     
@@ -110,15 +116,55 @@ session_start();
     </div>
 
     <div class="container-fluid">
-
-      <div class="row-fluid">
-        <div class="span12">
+          
+          <b>Nombre:</b> <label id="nombre_profesor"></label>
+          <b>Correo:</b> <label id="mail_profesor"></label>
+          <br>
           <center>
-            <img src="img/fotografia.jpg">
-            <p>Patricio Ruiz-Tagle</p>
+            <legend><u>Laboratorios realizados en el semestre: </u>
+              <br>
+              <div class="container-fluid ">
+                <select class="anio">Año:
+                  <option>2012</option>
+                  <option>2013</option>
+                </select>
+                
+              
+                <select class="sems">
+                  <option>1</option>
+                  <option>2</option>
+                </select>
+                <br>
+                     <input type="submit" id="anio_sems" class="btn btn-success botonfecha" value="Elegir fecha" />
+
+
+              </div>
+              <br>
+           </div>
+            </legend>
           </center>
-        </div>
-      </div><!-- end row 1 -->
+
+          <div class="row-fluid">
+            <center><div class="span4"><b><u>Laboratorio 1: </u></b></div></center>
+            <center><div class="span4"><b><u>Promedio notas: </u></b></div></center>
+            <center><div class="span4"><b><u>Promedio error: </u></b></div></center>
+          </div>
+          <center><hr width="80%"></center>
+          <div class="row-fluid">
+            <center><div class="span4"><b><u>Laboratorio 2: </u></b></div></center>
+            <center><div class="span4"><b><u>Promedio notas: </u></b></div></center>
+            <center><div class="span4"><b><u>Promedio error: </u></b></div></center>
+          </div>
+          <center><hr width="80%"></center>
+          <div class="row-fluid">
+            <center><div class="span4"><b><u>Laboratorio 3: </u></b></div></center>
+            <center><div class="span4"><b><u>Promedio notas: </u></b></div></center>
+            <center><div class="span4"><b><u>Promedio error: </u></b></div></center>
+          </div>
+          <center><hr width="80%"></center>
+          <br>
+          <center><input type="submit" id="btn_crear_lab" onclick="ir_a_crear_lab()" class="btn btn-success boton_crear_lab" value="Crear laboratorio" /></center>
+  
 
     </div> <!-- /container -->
     
@@ -126,8 +172,16 @@ session_start();
   </body>
 
   <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-  <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
+  <script type="text/javascript" src="js/bootstrap-dropdown.js"></script>  
   <script src="js/bootstrap.min.js"></script>
   <script src="js/bootstrap.js"></script>
+  <script type="text/javascript">
+    function ir_a_crear_lab()
+    {
+    parent.location="laboratorios/crear_lab.html"
+    }
+  </script>
+  <head>
+  
 
 </html>

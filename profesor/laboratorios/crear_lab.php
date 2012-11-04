@@ -23,10 +23,9 @@ session_start();
         padding-top: 60px;
         padding-bottom: 40px;
       }
-      .comboBox {width: 60px; height: 30px}
-      .textFields {width: 80px; height: 30px}
-      .celdaTabla {width: 300px;}
-      
+      .celdaTabla {width: 400px}
+      .comboBoxs {width: 60px}
+      .textFields {width: 80px}
     </style>
 
   </head>
@@ -110,20 +109,20 @@ session_start();
       </div>
     </div>
 
-    <div class="container">
+    <div class="container-fluid">
         
         <center>
                 <table id="tabla_new_lab" class="table table-bordered celdaTabla">
                   <tr>
-                      <th><center>Semestre:  </center></th>
-                  <td><center><select id="semestre" class="comboBox">
+                  <th><center>Semestre:  </center></th>
+                  <td><center><select id="semestre" class="comboBoxs">
                         <option>1</option>
                         <option>2</option>
                       </select></center></td>
                 </tr>
                 <tr>
                   <th><center>Periodo:  </center></th>
-                  <td><center><select id="periodo" class="comboBox">
+                  <td><center><select id="periodo" class="comboBoxs">
                         <option val="1">I</option>
                         <option val="2">II</option>
                         <option val="3">III</option>
@@ -135,7 +134,7 @@ session_start();
                 </tr>
                 <tr>
                   <th><center>Grupo paralelo:  </center></th>
-                  <td><center><select id="grupo_par" class="comboBox">
+                  <td><center><select id="grupo_par" class="comboBoxs">
                         <option val="1">1</option>
                         <option val="2">2</option>
                         <option val="3">3</option>
@@ -162,9 +161,6 @@ session_start();
         
     </div>
     
-  <center> <input type="submit" id="guardar_lab" class="btn btn-success" value="Guardar Laboratorio" /> </center>
-
-  
       
 
     <!-- Le javascript

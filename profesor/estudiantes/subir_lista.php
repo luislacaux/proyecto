@@ -25,19 +25,12 @@ session_start();
         padding-top: 60px;
         padding-bottom: 40px;
       }
+      .formatcell {width: 380px;}
+      .anio {width: 80px;}
+      .sems {width: 60px;}
     </style>
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements 
-          - updated in Bootstrap 2.02 to include the http: -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <!-- Le fav and touch icons -->
-    <!--<link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">-->
+    
   </head>
 
   <body>
@@ -122,25 +115,38 @@ session_start();
     <div class="container-fluid">
 
       <div class="row-fluid">
-        <div class="span4">
-          <h2>Setup Notes</h2>
-           <p>Get your markup, CSS, and JavaScript organized and linked up!</p>
-          <center><p><a class="btn" href="setup-notes.html">Go there &raquo;</a></p></center>
+        
+        <div>
+            <center><select class="anio">Año:
+              <option>2012</option>
+              <option>2013</option>
+            </select>
+          
+            <select class="sems">
+              <option>1</option>
+              <option>2</option>
+            </select>   </center>           
         </div>
-        <div class="span4">
-          <h2>Navbar Examples</h2>
-           <p>Suggestions and code for three ways to setup your navbar:</p>
-            <ul>
-              <li>fixed-top</li>
-              <li>static full-width</li>
-              <li>static inside container</li>
-            </ul>
-          <p><a class="btn" href="navbar-examples.html">Go there &raquo;</a></p>
-       </div>
-        <div class="span4">
-          <h2>Next Up: Tabs & Pills</h2>
-          <p>Coming soon!</p>
-        </div>
+
+        <br>
+        <br>
+        <div class="container-fluid">
+        
+        <center>
+                
+              <div id="primer_div" >
+                <center><br>Seleccione el arhivo .CSV desde su máquina<br><br><input type="submit" id="btn_elegir" class="btn btn-success" value="Elegir archivo" onclick="toggle_doble('primer_div','segundo_div')") /></center>
+              </div>
+              <div id="segundo_div" >
+                <center><br>Por favor, confirme el archivo a subir<br><br><input type="submit" id="guardar" class="btn btn-success" value="Re-elegir archivo" onclick="toggle_doble('segundo_div','primer_div')")/>   <input type="submit" id="btn_confirmar" class="btn btn-success" value="Confirmar y subir" onclick="toggle_doble('segundo_div','tercer_div')"/></center>
+              </div>
+              <div id="tercer_div">
+                <br><center><input type="submit" id="btn_ver_lista" class="btn btn-success" value="Ver lista de estudiantes" />
+              </center>
+              </div>
+                
+          </center>
+
       </div><!-- end row 1 -->
 
 
@@ -152,10 +158,35 @@ session_start();
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    
     <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
   <script type="text/javascript" src="../js/bootstrap-dropdown.js"></script>
   <script src="../js/bootstrap.min.js"></script>
   <script src="../js/bootstrap.js"></script>
+  <script type="text/javascript">
+
+        
+       $(document).ready(function(){document.getElementById('segundo_div').style.display = 'none'} );
+         $(document).ready(function(){  document.getElementById('tercer_div').style.display = 'none'} );
+
+       
+       
+      
+
+      function toggle_doble(id,id2){
+         var ee = document.getElementById(id);
+         var e = document.getElementById(id2);
+         if(e.style.display == 'block'){
+            e.style.display = 'none';
+            ee.style.display = 'block';
+          }
+         else{
+            e.style.display = 'block'
+            ee.style.display = 'none';
+          }
+      }
+           
+     </script>
 
   </body>
 </html>

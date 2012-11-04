@@ -122,6 +122,7 @@ session_start();
     <div class="container-fluid">
       
     <fieldset>
+      <legend>Fecha:    <input type="date" name="checkin-date"></legend>
       <legend>Nombre:   <input type="text" id="nombre_formulario"></legend>
     </fieldset>
 
