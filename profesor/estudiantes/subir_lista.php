@@ -1,8 +1,8 @@
-<?php
-require("../../webservices/securityprof.php");
-session_start();
+//<?php
+//require("../../webservices/securityprof.php");
+//session_start();
 
-?>
+//?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -135,10 +135,11 @@ session_start();
         <center>
                 
               <div id="primer_div" >
+                  <form action="subir.php" method="post" enctype="multipart/form-data">  
                 <center><br>Seleccione el arhivo .CSV desde su máquina<br><br><input name="userfile" type="file" id="btn_elegir" class="btn btn-success" value="Elegir archivo" onclick="toggle_doble('primer_div','segundo_div')") /></center>
               </div>
               <div id="segundo_div" >
-                <center><br>Por favor, confirme el archivo a subir<br><br><input type="submit" id="guardar" class="btn btn-success" value="Re-elegir archivo" onclick="toggle_doble('segundo_div','primer_div')")/>   <input type="submit" id="btn_confirmar" class="btn btn-success" value="Confirmar y subir" onclick="toggle_doble('segundo_div','tercer_div')"/></center>
+                  <center><br>Por favor, confirme el archivo a subir<br><br><input type="submit" id="guardar" class="btn btn-success" value="Re-elegir archivo" onclick="toggle_doble('segundo_div','primer_div')")/>  <input type="submit" id="btn_confirmar" class="btn btn-success" value="Confirmar y subir" onclick="toggle_doble('segundo_div','tercer_div')"/></form></center>
               </div>
               <div id="tercer_div">
                 <br><center><input type="submit" id="btn_ver_lista" class="btn btn-success" value="Ver lista de estudiantes" />
