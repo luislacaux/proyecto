@@ -54,7 +54,7 @@ session_start();
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li>
-                <a href="../index.html">Inicio</a>
+                <a href="../index.php">Inicio</a>
               </li>
               <ul class="nav">
                   <li class="dropdown">  
@@ -62,8 +62,8 @@ session_start();
                       <b class="caret"></b>  
                     </a>  
                     <ul class="dropdown-menu"> 
-                          <li><a href="../laboratorios/crear_lab.html">Nuevo laboratorio</a></li>  
-                          <li><a href="../laboratorios/labs_realizados.html">Laboratorios realizados</a></li>  
+                          <li><a href="../laboratorios/crear_lab.php">Nuevo laboratorio</a></li>  
+                          <li><a href="../laboratorios/labs_realizados.php">Laboratorios realizados</a></li>  
                     </ul>  
                   </li> 
                </ul>
@@ -73,8 +73,8 @@ session_start();
                       <b class="caret"></b>  
                     </a>  
                     <ul class="dropdown-menu"> 
-                          <li><a href="../formularios/crear_formulario.html">Crear formulario</a></li>  
-                          <li><a href="../formularios/lista_formularios.html">Ver lista de formularios</a></li>  
+                          <li><a href="../formularios/crear_formulario.php">Crear formulario</a></li>  
+                          <li><a href="../formularios/lista_formularios.php">Ver lista de formularios</a></li>  
                     </ul>  
                   </li> 
                </ul>          
@@ -84,8 +84,8 @@ session_start();
                       <b class="caret"></b>  
                     </a>  
                     <ul class="dropdown-menu"> 
-                          <li><a href="../estudiantes/subir_lista.html">Subir lista estudiantes</a></li>  
-                          <li><a href="../estudiantes/resumen.html">Ver resumen</a></li>  
+                          <li><a href="../estudiantes/subir_lista.php">Subir lista estudiantes</a></li>  
+                          <li><a href="../estudiantes/resumen.php">Ver resumen</a></li>  
                     </ul>  
                   </li> 
                </ul>
@@ -95,22 +95,22 @@ session_start();
                       <b class="caret"></b>  
                     </a>  
                     <ul class="dropdown-menu"> 
-                          <li><a href="../estadisticas/estadisticas_notas.html">De notas</a></li>  
-                          <li><a href="../estadisticas/estadisticas_asistencia.html">De asistencia</a></li>  
-                          <li><a href="../estadisticas/estadisticas_errores.html">De errores</a></li> 
+                          <li><a href="../estadisticas/estadisticas_notas.php">De notas</a></li>  
+                          <li><a href="../estadisticas/estadisticas_asistencia.php">De asistencia</a></li>  
+                          <li><a href="../estadisticas/estadisticas_errores.php">De errores</a></li> 
                     </ul>  
                   </li> 
                </ul>         
               <li>
                 <li>
-                <a href="../agregar_profesor/nuevo_profesor.html">Agregar profesor</a>
+                <a href="../agregar_profesor/nuevo_profesor.php">Agregar profesor</a>
               </li>    
               <li>
                 <li>
-                <a href="../datos/mis_datos.html">Mis datos</a>
+                <a href="../datos/mis_datos.php">Mis datos</a>
               </li>    
               <li>
-                <a href="login.html">Salir</a>
+                <a href="login.php">Salir</a>
               </li>           
             </ul>
            <!--/  <a class="btn btn-primary pull-right" href="http://twitter.github.com/bootstrap/">Twitter Bootstrap Home</a>-->
