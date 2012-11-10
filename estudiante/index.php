@@ -1,8 +1,3 @@
-<?php
-require("../webservices/securityprof.php");
-session_start();
-
-?>
 <!doctype html> <!-- decirle al navegador que lo q viene es un documento html
 y por si usas html5 en tu doc -->
 <html>
@@ -48,13 +43,16 @@ y por si usas html5 en tu doc -->
           <div class="nav-collapse collapse">
             <ul class="nav">
               <ul class="nav">
+                <li>
+                  <a href="index.php">Inicio</a>
+                </li>
                   <li class="dropdown">  
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Laboratorios
                       <b class="caret"></b>  
                     </a>  
                     <ul class="dropdown-menu"> 
-                          <li><a href="grupo/grupo.html">Crear grupo</a></li>  
-                          <li><a href="laboratorio/laboratorio.html">Responder laboratorio</a></li>  
+                          <li><a href="grupo/grupo.php">Crear grupo</a></li>  
+                          <li><a href="laboratorios/responder.php">Responder laboratorio</a></li>  
                     </ul>  
                   </li> 
                </ul>
@@ -63,12 +61,12 @@ y por si usas html5 en tu doc -->
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ver resumen<b class="caret"></b>  
                     </a>  
                     <ul class="dropdown-menu"> 
-                          <li><a href="formularios/crear_formulario.html">Laboratorios realizados</a></li>   
+                          <li><a href="verResumen/resumen.php">Laboratorios realizados</a></li>   
                     </ul>  
                   </li> 
                </ul>            
               <li>
-                <a href="login.html">Salir</a>
+                <a href="login.php">Salir</a>
               </li>           
             </ul>
 

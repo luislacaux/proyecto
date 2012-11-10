@@ -4,18 +4,14 @@ y por si usas html5 en tu doc -->
 <head>
 <meta charset="utf-8"/>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!--<script src="http://code.jquery.com/jquery-latest.js"></script>-->
-
 <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="../js/jquery.Rut.js"></script>
 <script type="text/javascript" src="../js/bootstrap-dropdown.js"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap.js"></script>
 <script type="text/javascript" src="../script/index.js"></script>
 <script type="text/javascript" src="../js/mostrar.js"></script>
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="../css/bootstrap-responsive.css" rel="stylesheet">
 
 <link href="../css/bootstrap.css" rel="stylesheet">
@@ -30,10 +26,10 @@ y por si usas html5 en tu doc -->
   }
 </style>
 
-
 <title>Química</title>
 
 </head>
+
 <body>
 <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
@@ -49,15 +45,15 @@ y por si usas html5 en tu doc -->
               <ul class="nav">
                 <ul class="nav">
                   <li>
-                    <a href="../index.php">Inicio</a>
+                    <a href="index.html">Inicio</a>
                   </li>
                   <li class="dropdown">  
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Laboratorios
                       <b class="caret"></b>  
                     </a>  
                     <ul class="dropdown-menu"> 
-                          <li><a href="grupo/grupo.php">Crear grupo</a></li>  
-                          <li><a href="../laboratorios/responder.php">Responder laboratorio</a></li>  
+                          <li><a href="grupo/grupo.html">Crear grupo</a></li>  
+                          <li><a href="laboratorios/laboratorios.html">Responder laboratorio</a></li>  
                     </ul>  
                   </li> 
                </ul>
@@ -66,12 +62,12 @@ y por si usas html5 en tu doc -->
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ver resumen<b class="caret"></b>  
                     </a>  
                     <ul class="dropdown-menu"> 
-                          <li><a href="../verResumen/resumen.php">Laboratorios realizados</a></li>   
+                          <li><a href="verResumen/resumen.html">Laboratorios realizados</a></li>   
                     </ul>  
                   </li> 
                </ul>            
               <li>
-                <a href="login.php">Salir</a>
+                <a href="login.html">Salir</a>
               </li>           
             </ul>
 
@@ -82,45 +78,21 @@ y por si usas html5 en tu doc -->
     </div>
 
 <div class="container-fluid">
-  <h5>Agregue estudiantes a su grupos</h5>
-  
-    <form class="form-horizontal">
+<form class="form-horizontal">
+    <div class="control-group">
+     	<span>Laboratorio 1</span>
+        <button id="ir1" type="submit" class="btn">Ir</button>
+    </div>
+    <div class="control-group">
+    	<span>Laboratorio 2</span>
+        <button id="ir2" type="submit" class="btn">Ir</button>
+    </div>
+    <div class="control-group">
+      <span>Laboratorio 3</span>
+      <button id="ir3" type="submit" class="btn">Ir</button>
+    </div>
 
-        <div id="div1" class="control-group">
-            <input class="span2" type="text" placeholder="RUT">
-            <a class="btn" id="mas1" href="#">
-                <i class="icon-plus"></i>
-            </a>
-        </div>
-        <div id="div2" class="control-group">
-            <input class="span2" type="text" placeholder="RUT">
-           <a class="btn" id="mas2" href="#">
-                <i class="icon-plus"></i>
-            </a>
-        </div>
-        <div id="div3" class="control-group">
-            <input class="span2" type="text" placeholder="RUT">
-            <a class="btn" id="mas3" href="#">
-                <i class="icon-plus"></i>
-            </a>
-        </div>
-
-        <div id="div4" class="control-group">
-            <input class="span2" type="text" placeholder="RUT">
-            <a class="btn" id="mas4" href="#">
-                <i class="icon-plus"></i>
-            </a>
-        </div>
-         <div id="div5" class="control-group">
-            <input class="span2" type="text" placeholder="RUT">
-            <a class="btn" id="mas5" href="#">
-                <i class="icon-plus"></i>
-            </a>
-        </div>
-        <div id="btn1" class="control-group">
-          <button id="finalizar" type="submit" class="btn">Finalizar</button>
-      </div>
-    </form>
+</form>
 </div>
 </body>
 </html>

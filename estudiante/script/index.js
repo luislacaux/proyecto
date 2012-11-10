@@ -23,6 +23,6 @@ $(function(){
 	});
 
 	$('#ir1').click(function(){
-		$('contenedor').load('responder.html');
+		$('contenedor').load('../laboratorios/responder.html');
 	});
 });

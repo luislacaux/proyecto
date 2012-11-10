@@ -1,6 +1,6 @@
 <?php
-require("../../webservices/securityprof.php");
-session_start();
+//require("../../webservices/securityprof.php");
+//session_start();
 
 ?>
 
@@ -18,7 +18,7 @@ session_start();
     <link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/bootstrap-responsive.css" rel="stylesheet">
     <link href="../js/prettify/prettify.css" rel="stylesheet">
-
+    <script type="text/javascript" src="laboratorios.js"></script> 
     <style type="text/css">
       body {
         padding-top: 60px;
@@ -152,11 +152,13 @@ session_start();
                 </tr>
                 <tr>
                   <th><center>Limite por grupo:  </center></th>
-                  <td><center><input id="limite" type='text' class="textFields"></center></td>
+                  <td><center><input id="limite" type='text' class="textFields" ></center></td>
                 </tr>
                 <tr>
                   <th><center>ID formulario:  </center></th>
-                  <td><center><input id="ID_form" type='text' class="textFields"></center></td>
+                  <td><center><select id="nombreform" name="nombreform" type='text' class="textFields"  onfocus="javascript:_onpressed(this);">
+                  <option value="">Elija</option>
+                  </select></center></td>
                 </tr>
                 </table> 
                 </center>
@@ -167,9 +169,12 @@ session_start();
       <center><input type="submit" id="crear_lab" class="btn btn-success" value="Crear Laboratorio" /></center></div>
     
     <script>
-      function crear_lab(){
-          
-      }
+   // $(document).ready(function(){
+     // $("#nombreform").click(function(event){
+       
+     //  _onpressed(this)
+   //});
+ //});
     </script>
 
       
