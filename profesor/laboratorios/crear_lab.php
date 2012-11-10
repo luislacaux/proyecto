@@ -3,6 +3,7 @@ require("../../webservices/securityprof.php");
 session_start();
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,8 +23,10 @@ session_start();
       body {
         padding-top: 60px;
         padding-bottom: 40px;
+        background: #C7EEBB; 
       }
-      .celdaTabla {width: 400px}
+      .celdaTabla {width: 400px; height: 10px; background-color: white;
+                    }
       .comboBoxs {width: 60px}
       .textFields {width: 80px}
     </style>
@@ -160,7 +163,14 @@ session_start();
           
         
     </div>
+    <div>
+      <center><input type="submit" id="crear_lab" class="btn btn-success" value="Crear Laboratorio" /></center></div>
     
+    <script>
+      function crear_lab(){
+      }
+    </script>
+
       
 
     <!-- Le javascript
