@@ -24,6 +24,7 @@ session_start();
       body {
         padding-top: 60px;
         padding-bottom: 40px;
+        background: #C7EEBB; 
       }
       .anio {width: 80px;}
       .sems {width: 60px;}
@@ -50,7 +51,7 @@ session_start();
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li>
-                <a href="index.html">Inicio</a>
+                <a href="index.php">Inicio</a>
               </li>
               <ul class="nav">
                   <li class="dropdown">  
@@ -178,7 +179,7 @@ session_start();
   <script type="text/javascript">
     function ir_a_crear_lab()
     {
-    parent.location="laboratorios/crear_lab.html"
+    parent.location="laboratorios/crear_lab.php"
     }
   </script>
   <head>

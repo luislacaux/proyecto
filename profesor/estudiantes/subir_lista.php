@@ -24,6 +24,7 @@ session_start();
       body {
         padding-top: 60px;
         padding-bottom: 40px;
+        background: #C7EEBB; 
       }
       .formatcell {width: 380px;}
       .anio {width: 80px;}

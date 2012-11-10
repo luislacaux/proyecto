@@ -168,6 +168,7 @@ session_start();
     
     <script>
       function crear_lab(){
+          
       }
     </script>
 

@@ -24,6 +24,7 @@ session_start();
       body {
         padding-top: 60px;
         padding-bottom: 40px;
+        background: #C7EEBB; 
       }
     </style>
 
@@ -119,35 +120,6 @@ session_start();
       </div>
     </div>
 
-    <div class="container-fluid">
-
-      <div class="row-fluid">
-        <div class="span4">
-          <h2>Setup Notes</h2>
-           <p>Get your markup, CSS, and JavaScript organized and linked up!</p>
-          <center><p><a class="btn" href="setup-notes.html">Go there &raquo;</a></p></center>
-        </div>
-        <div class="span4">
-          <h2>Navbar Examples</h2>
-           <p>Suggestions and code for three ways to setup your navbar:</p>
-            <ul>
-              <li>fixed-top</li>
-              <li>static full-width</li>
-              <li>static inside container</li>
-            </ul>
-          <p><a class="btn" href="navbar-examples.html">Go there &raquo;</a></p>
-       </div>
-        <div class="span4">
-          <h2>Next Up: Tabs & Pills</h2>
-          <p>Coming soon!</p>
-        </div>
-      </div><!-- end row 1 -->
-
-
-      
-
-
-    </div> <!-- /container -->
 
     <!-- Le javascript
     ================================================== -->

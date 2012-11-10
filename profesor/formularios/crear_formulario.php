@@ -24,7 +24,9 @@ session_start();
       body {
         padding-top: 60px;
         padding-bottom: 40px;
+        background: #C7EEBB; 
       }
+      .celdaTabla {background-color: white;}
     </style>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements 
@@ -122,13 +124,12 @@ session_start();
     <div class="container-fluid">
       
     <fieldset>
-      <legend>Fecha:    <input type="date" name="checkin-date"></legend>
       <legend>Nombre:   <input type="text" id="nombre_formulario"></legend>
     </fieldset>
 
     <div id="container">
         <form id="f" name="f">
-            <table id="tablaUsuarios" class="table table-bordered" >
+            <table id="tablaUsuarios" class="table table-bordered celdaTabla" >
                 <tr>
                     <th >Pregunta</th>
                     <th >Solución </th>
