@@ -1,8 +1,8 @@
-//<?php
-//require("../../webservices/securityprof.php");
-//session_start();
+<?php
+require("../../webservices/securityprof.php");
+session_start();
 
-//?>
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
