@@ -47,6 +47,8 @@ function _onpressed(comboBox2)
 {
    //var cont = datosform(); 
    //var nombres = datosform2();
+   
+   
    var cont = 2;
    var nombre = new Array ('hola','hcasc');
    this._removeOptions( comboBox2 );

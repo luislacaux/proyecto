@@ -13,8 +13,17 @@ function datosformulario(){
     $row = mysql_fetch_row($resQuery);
     $row2 = mysql_fetch_row($resQuery2);
     
+    //row es ele arreglo con los nombres
+    $string = $row[0];
+    for ($i=1;$i<$row2[0];$i++){
+        $string = $string + "," + $row[$i];
+        
+        
+    }
+    
+    
     $jsondata['cantidad'] = $row2[0];
-    $jsondata['nombre'] = $row;
+    $jsondata['nombre'] = $string;
     echo json_encode($jsondata);
 }
 ?>
