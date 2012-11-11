@@ -148,6 +148,7 @@ session_start();
   <script type="text/javascript" src="../js/bootstrap-dropdown.js"></script>
   <script src="../js/bootstrap.min.js"></script>
   <script src="../js/bootstrap.js"></script>
+  <script type="text/javascript" src="../js/formularios.js"></script> 
 
   <script type="text/javascript">
 
@@ -160,11 +161,18 @@ session_start();
         "<td><center><input type='submit' value='Ver' class='btn btn-success eliminar'></center></td>"+
         "</tr>")
     }
+    var forms = getformularios();
+    var arr = forms.split("$");
     
-    var arrID = ['1','2','3','4','5','6','7','8'];
+    var arrID = arr[0].split(",");
+    var arrNom = arr[1].split(",");
+    var arrAutor = arr[2].split(",");
+    var arrFecha = arr[3].split(",");
+    
+   /* var arrID = ['1','2','3','4','5','6','7','8'];
     var arrNom = ['Fomrulario pichicun','Formulario hola-chau','Quimica Interesaante','Formulario corta head','Formu inventao','masclo','me','aburri'];
     var arrAutor = ['Patricio Ruiz-Tagle','Luz Alegria','Patricio Ruiz-Tagle','Patricio Ruiz-Tagle','Luz Alegria','Luz Alegria','Patricio Ruiz-Tagle','Luz Alegria'];
-    var arrFecha = ['13/04/1999','23/06/1999','13/04/2000','23/06/2000','13/04/2001','23/06/2001','13/04/2002','23/06/2002'];
+    var arrFecha = ['13/04/1999','23/06/1999','13/04/2000','23/06/2000','13/04/2001','23/06/2001','13/04/2002','23/06/2002'];*/
 
     function obtenerForm(){
          for (i=0;i<arrID.length;i++){
