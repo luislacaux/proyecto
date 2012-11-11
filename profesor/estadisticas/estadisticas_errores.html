@@ -1,15 +1,9 @@
-<?php
-require("../../webservices/securityprof.php");
-session_start();
-
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <title>Formulario de Quimica</title>
-    
-
+   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -24,9 +18,7 @@ session_start();
       body {
         padding-top: 60px;
         padding-bottom: 40px;
-        background: #C7EEBB; 
       }
-      .formatoTabla {width: 625px;background-color: white;}
     </style>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements 
@@ -42,8 +34,6 @@ session_start();
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">-->
   </head>
 
-
-
   <body>
 
     <div class="navbar navbar-fixed-top">
@@ -58,7 +48,7 @@ session_start();
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li>
-                <a href="../index.php">Inicio</a>
+                <a href="../index.html">Inicio</a>
               </li>
               <ul class="nav">
                   <li class="dropdown">  
@@ -66,8 +56,8 @@ session_start();
                       <b class="caret"></b>  
                     </a>  
                     <ul class="dropdown-menu"> 
-                          <li><a href="../laboratorios/crear_lab.php">Nuevo laboratorio</a></li>  
-                          <li><a href="../laboratorios/labs_realizados.php">Laboratorios realizados</a></li>  
+                          <li><a href="../laboratorios/crear_lab.html">Nuevo laboratorio</a></li>  
+                          <li><a href="../laboratorios/labs_realizados.html">Laboratorios realizados</a></li>  
                     </ul>  
                   </li> 
                </ul>
@@ -77,8 +67,8 @@ session_start();
                       <b class="caret"></b>  
                     </a>  
                     <ul class="dropdown-menu"> 
-                          <li><a href="../formularios/crear_formulario.php">Crear formulario</a></li>  
-                          <li><a href="../formularios/lista_formularios.php">Ver lista de formularios</a></li>  
+                          <li><a href="../formularios/crear_formulario.html">Crear formulario</a></li>  
+                          <li><a href="../formularios/lista_formularios.html">Ver lista de formularios</a></li>  
                     </ul>  
                   </li> 
                </ul>          
@@ -88,8 +78,8 @@ session_start();
                       <b class="caret"></b>  
                     </a>  
                     <ul class="dropdown-menu"> 
-                          <li><a href="../estudiantes/subir_lista.php">Subir lista estudiantes</a></li>  
-                          <li><a href="../estudiantes/resumen.php">Ver resumen</a></li>  
+                          <li><a href="../estudiantes/subir_lista.html">Subir lista estudiantes</a></li>  
+                          <li><a href="../estudiantes/resumen.html">Ver resumen</a></li>  
                     </ul>  
                   </li> 
                </ul>
@@ -99,22 +89,22 @@ session_start();
                       <b class="caret"></b>  
                     </a>  
                     <ul class="dropdown-menu"> 
-                          <li><a href="../estadisticas/estadisticas_notas.php">De notas</a></li>  
-                          <li><a href="../estadisticas/estadisticas_asistencia.php">De asistencia</a></li>  
-                          <li><a href="../estadisticas/estadisticas_errores.php">De errores</a></li> 
+                          <li><a href="../estadisticas/estadisticas_notas.html">De notas</a></li>  
+                          <li><a href="../estadisticas/estadisticas_asistencia.html">De asistencia</a></li>  
+                          <li><a href="../estadisticas/estadisticas_errores.html">De errores</a></li> 
                     </ul>  
                   </li> 
                </ul>         
               <li>
                 <li>
-                <a href="../agregar_profesor/nuevo_profesor.php">Agregar profesor</a>
+                <a href="../agregar_profesor/nuevo_profesor.html">Agregar profesor</a>
               </li>    
               <li>
                 <li>
-                <a href="../datos/mis_datos.php">Mis datos</a>
+                <a href="../datos/mis_datos.html">Mis datos</a>
               </li>    
               <li>
-                <a href="login.php">Salir</a>
+                <a href="login.html">Salir</a>
               </li>           
             </ul>
            <!--/  <a class="btn btn-primary pull-right" href="http://twitter.github.com/bootstrap/">Twitter Bootstrap Home</a>-->
@@ -123,24 +113,36 @@ session_start();
       </div>
     </div>
 
-    <center><legend>Lista de formularios existentes</legend></center>
+    <!--/<div class="container-fluid">
 
-    <div id="container">
-        <form id="f" name="f">
-            <center><table id="tablaFormularios" class="table table-bordered formatoTabla" >
-                <tr>
-                    <th ><center>ID</center></th>
-                    <th ><center>Nombre del formulario</center></th>
-                    <th><center>Autor/a</center></th>
-                    <th ><center>Fecha de creacion</center></th>
-                    <th></th>
-                </tr>
-            </table></center>
-        </form>
-    </div>
-    
+     <!--/ <div class="row-fluid">
+        <div class="span4">
+          <h2>Setup Notes</h2>
+           <p>Get your markup, CSS, and JavaScript organized and linked up!</p>
+          <center><p><a class="btn" href="setup-notes.html">Go there &raquo;</a></p></center>
+        </div>
+        <div class="span4">
+          <h2>Navbar Examples</h2>
+           <p>Suggestions and code for three ways to setup your navbar:</p>
+            <ul>
+              <li>fixed-top</li>
+              <li>static full-width</li>
+              <li>static inside container</li>
+            </ul>
+          <p><a class="btn" href="navbar-examples.html">Go there &raquo;</a></p>
+       </div>
+        <div class="span4">
+          <h2>Next Up: Tabs & Pills</h2>
+          <p>Coming soon!</p>
+        </div>
+      </div><!-- end row 1 
 
-    
+
+      
+
+
+    </div> <!-- /container -->
+
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -148,35 +150,6 @@ session_start();
   <script type="text/javascript" src="../js/bootstrap-dropdown.js"></script>
   <script src="../js/bootstrap.min.js"></script>
   <script src="../js/bootstrap.js"></script>
-
-  <script type="text/javascript">
-
-    function nuevaFila(id,nomform,autor,fecha){
-      $("#tablaFormularios").append("</center><tr>"+
-        "<td><center>"+id+"</td>"+
-        "<td><center>"+nomform+"</center></td>"+
-        "<td><center>"+autor+"</center></td>"+
-        "<td><center>"+fecha+"</center></td>"+
-        "<td><center><input type='submit' value='Ver' class='btn btn-success eliminar'></center></td>"+
-        "</tr>")
-    }
-    
-    var arrID = ['1','2','3','4','5','6','7','8'];
-    var arrNom = ['Fomrulario pichicun','Formulario hola-chau','Quimica Interesaante','Formulario corta head','Formu inventao','masclo','me','aburri'];
-    var arrAutor = ['Patricio Ruiz-Tagle','Luz Alegria','Patricio Ruiz-Tagle','Patricio Ruiz-Tagle','Luz Alegria','Luz Alegria','Patricio Ruiz-Tagle','Luz Alegria'];
-    var arrFecha = ['13/04/1999','23/06/1999','13/04/2000','23/06/2000','13/04/2001','23/06/2001','13/04/2002','23/06/2002'];
-
-    function obtenerForm(){
-         for (i=0;i<arrID.length;i++){
-            nuevaFila(arrID[i],arrNom[i],arrAutor[i],arrFecha[i]);
-
-         }
-    }
-   $(document).ready(obtenerForm());
-
-  
-
-    </script>
 
   </body>
 </html>

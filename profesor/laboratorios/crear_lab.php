@@ -169,8 +169,8 @@
       <center><input type="submit" id="crear_lab" class="btn btn-success" value="Crear Laboratorio" /></center></div>
     
     <script>
-   // $(document).ready(function(){
-     // $("#nombreform").click(function(event){
+     $(document).ready(function(){
+     $("#").click(function(event){
        
      //  _onpressed(this)
    //});
