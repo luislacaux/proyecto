@@ -7,7 +7,7 @@ function datosform(){
     dataType: "json",
     url: "../../webservices/datosformulario.php",
     success: function(data){
-        cant = data.cantidad;
+        cant = data.datos;
        
      }
    });
@@ -20,13 +20,12 @@ function datosform(){
     type: "GET",
     async: false,
     dataType: "json",
-    url: "datosformulario.php",
+    url: "../../webservices/datosformulario.php",
     success: function(data){
         opt = data.nombre;
        
      }
    });
-   //opt = data.nombre;
    return opt;
   }
 
@@ -38,16 +37,17 @@ function datosform(){
   
 function _onpressed(comboBox2) 
 {
-   var cant = datosform();
-   var nombre = datosform2();
+   
+   var nombre = datosform();
    var nombres = nombre.split(',');
+   var cant = nombres[0];
    console.log("cant");
    console.log("nombre");
    
    //var cant = 4;
    //var nombres = new Array ('hola','hcasc');
    this._removeOptions( comboBox2 );
-   for(var contador = 0; contador < cant ; contador++) {
+   for(var contador = 1; contador < cant ; contador++) {
                 console.log("entre");
               this._insertOption(comboBox2,nombres[contador] , nombres[contador]);
       
