@@ -50,7 +50,7 @@ function _onpressed(comboBox2)
    
    
    var cont = 2;
-   var nombre = new Array ('hola','hcasc');
+   var nombre = new Array ();
    this._removeOptions( comboBox2 );
    for(var contador = 0; contador < cont ; contador++) {
                 console.log("entre");
