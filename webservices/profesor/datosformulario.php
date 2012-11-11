@@ -16,12 +16,10 @@ function datosformulario(){
     //row es ele arreglo con los nombres
     $string = $row[0];
     for ($i=1;$i<$row2[0];$i++){
-        $string = $string + "," + $row[$i];
-        
-        
+        $filas = mysql_fetch_row($resQuery);
+        $string = $string.",".$filas[0];
     }
-    
-    
+   
     $jsondata['cantidad'] = $row2[0];
     $jsondata['nombre'] = $string;
     echo json_encode($jsondata);
