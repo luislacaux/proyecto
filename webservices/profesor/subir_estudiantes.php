@@ -47,7 +47,7 @@ if (is_uploaded_file($_FILES['userfile']['tmp_name']))  {
              die('Could not query:' . mysql_error());
            }
            mysql_close($db);
-           header("Location: subir_lista.php");
+           header("Location: ../../profesor/estudiantes/subir_lista.php");
            exit(0);
     } else {
          echo "File not moved to destination folder. Check permissions";
