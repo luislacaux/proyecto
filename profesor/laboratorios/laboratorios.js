@@ -1,62 +1,58 @@
-var datosform = function(){
+function datosform(){
+    var cant = 0;
   $.ajax({
     data: "",
     type: "GET",
+    async: false,
     dataType: "json",
-    url: "webservices/profesor/datosformulario.php",
+    url: "../../webservices/datosformulario.php",
     success: function(data){
-       restultadodatosform(data);
-       restultadodatosform2(data);
+        cant = data.cantidad;
+       
      }
    });
-  };
-  var datosform2 = function(){
+    return cant;
+  }
+ function datosform2(){
+  var opt = "";
   $.ajax({
     data: "",
     type: "GET",
+    async: false,
     dataType: "json",
-    url: "webservices/profesor/datosformulario.php",
+    url: "datosformulario.php",
     success: function(data){
-       restultadodatosform2(data);
+        opt = data.nombre;
+       
      }
    });
-  };
-var restultadodatosform = function(data){
-      $("div.info").html("").show();
-      $("div.info").append("cantidad: "+data.cantidad);
-       
-      console.log(data.cantidad);
-     
-       return data.cantidad;
-      
-  };
-var restultadodatosform2 = function(data){
-       $("div.info").html("").show();
-       $("div.info").append("nombre: "+data.nombre);
-     console.log(data.nombre);
-       
-       return data.nombre;
-      
-  };
+   //opt = data.nombre;
+   return opt;
+  }
+
 
 
   function cierra(){
-window.close();
+    window.close();
   }
+  
 function _onpressed(comboBox2) 
 {
-   //var cont = datosform(); 
-   //var nombres = datosform2();
+   var cant = datosform();
+   var nombre = datosform2();
+   var nombres = nombre.split(',');
+   console.log("cant");
+   console.log("nombre");
    
-   
-   var cont = 2;
-   var nombre = new Array ();
+   //var cant = 4;
+   //var nombres = new Array ('hola','hcasc');
    this._removeOptions( comboBox2 );
-   for(var contador = 0; contador < cont ; contador++) {
+   for(var contador = 0; contador < cant ; contador++) {
                 console.log("entre");
-              this._insertOption(comboBox2,nombre[contador] , nombre[contador]);
+              this._insertOption(comboBox2,nombres[contador] , nombres[contador]);
       
-   }
+   } 
+   //this._insertOption(comboBox,nombres[0].nombres[0]);
    comboBox2.selectedIndex = 0;
 }
 function _insertOption(comboBox, optionText, optionValue)
