@@ -31,6 +31,7 @@
                     }
       .comboBoxs {width: 60px}
       .textFields {width: 80px}
+      .comboform {width: 120px}
     </style>
 
   </head>
@@ -158,7 +159,7 @@
                 </tr>
                 <tr>
                   <th><center>ID formulario:  </center></th>
-                  <td><center><select id="nombreform" name="nombreform" type='text' class="textFields"  onfocus="javascript:_onpressed(this);">
+                  <td><center><select id="nombreform" name="nombreform" type='text' class="comboform"  onfocus="javascript:_onpressed(this);">
                   <option value="">Elija</option>
                   </select></center></td>
                 </tr>
