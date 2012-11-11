@@ -1,7 +1,7 @@
 var crearlab = function(dato){
     $.ajax({
     data: "dato="+dato,
-    type: "GET",
+    type: "POST",
     async: false,
     dataType: "json",
     url: "../../webservices/crearlaboratorio.php",
@@ -21,8 +21,8 @@ var crearlab = function(dato){
         //var asd= data.tipo;
         //console.log(asd);
        if (data.tipo == "OK"){
-         //console.log("prof");
-           location.href='profesor/index.php'; } 
+           alert("Laboratorio creado con éxito")
+           location.href='../'; } 
        else {
            if(data.tipo=="ESTUDIANTE"){
            //console.log("estu");

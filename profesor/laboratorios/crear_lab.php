@@ -18,7 +18,9 @@
     <link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/bootstrap-responsive.css" rel="stylesheet">
     <link href="../js/prettify/prettify.css" rel="stylesheet">
-    <script type="text/javascript" src="laboratorios.js"></script> 
+    <script type="text/javascript" src="laboratorios.js"></script>
+   
+    </script>
     <style type="text/css">
       body {
         padding-top: 60px;
@@ -168,14 +170,7 @@
     <div>
       <center><input type="submit" id="crear_lab" class="btn btn-success" value="Crear Laboratorio" /></center></div>
     
-    <script>
-     $(document).ready(function(){
-     $("#").click(function(event){
-       
-     //  _onpressed(this)
-   //});
- //});
-    </script>
+   
 
       
 
@@ -186,6 +181,24 @@
     <script type="text/javascript" src="../js/bootstrap-dropdown.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/bootstrap.js"></script>
+     <script>
+        $(document).ready(function(){
+        $("#crear_lab").click(function(event){
+         var semestre = $('#semestre option:selected').val();
+         //console.log(semestre);
+         var periodo = $('#periodo option:selected').val();
+         //console.log(periodo);
+         var grupo = $('#grupo_par option:selected').val();
+         //console.log(grupo);
+         var limite = $('#limite').val();
+         //console.log(limite);
+         var nombre_form =$('#nombreform option:selected').val();
+         //console.log(nombre_form);
+         
+         crearlab(periodo+" "+grupo+" "+semestre+" "+limite+" "+nombre_form);
+   });
+ });
+     </script>
 
   </body>
 </html>
