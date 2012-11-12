@@ -1,8 +1,3 @@
-<?php
-require("../../webservices/securityprof.php");
-session_start();
-
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,9 +9,9 @@ session_start();
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link href="../css/bootstrap.css" rel="stylesheet">
-    <link href="../css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="../js/prettify/prettify.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="js/prettify/prettify.css" rel="stylesheet">
 
 
     <!-- Le styles -->
@@ -153,10 +148,11 @@ session_start();
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
-  <script type="text/javascript" src="../js/bootstrap-dropdown.js"></script>
-  <script src="../js/bootstrap.min.js"></script>
-  <script src="../js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap-dropdown.js"></script>
+  <script type="text/javascript" src="obtieneEst.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.js"></script>
 
   <script type="text/javascript">
 
@@ -174,10 +170,11 @@ session_start();
       
     }
     
-    var arrRut = ['1','2','3','4','5','6','7','8'];
-    var arrNom = ['a','b','c','d','e','f','g','h'];
+    /*var arrRut = ['1','2','3','4','5','6','7','8'];
+    var arrNom = ['a','b','c','d','e','f','g','h'];*/
+   
     
-    function obtenerForm(grupo){
+    function obtenerForm(grupo,arrRut,arrNom){
       if (n_fila > 0){
         for (k=0;k<=n_fila;k++){
           $("#fila_" + k).remove();
@@ -193,7 +190,8 @@ session_start();
 
       else{
         for (i=0;i<arrRut.length;i++){
-            n_fila = n_fila + i;
+
+            n_fila = n_fila + 1;
             nuevaFila(arrRut[i],arrNom[i]);
 
          }
@@ -202,9 +200,16 @@ session_start();
     }
 
     function get_grupo(){
-
+  
       var item_sel = $("#select_grupo").val();
-      obtenerForm(item_sel);
+      var est = getEstudiantes(item_sel);
+      var arr = est.split("$");
+    
+      var arrRut=arr[0].split(",");
+      var arrNom=arr[1].split(",");
+      
+      
+      obtenerForm(item_sel,arrRut,arrNom);
 
     }
 
