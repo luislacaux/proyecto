@@ -1,8 +1,3 @@
-<?php
-require("../../webservices/securityprof.php");
-session_start();
-
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,9 +9,9 @@ session_start();
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link href="../css/bootstrap.css" rel="stylesheet">
-    <link href="../css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="../js/prettify/prettify.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="js/prettify/prettify.css" rel="stylesheet">
 
 
     <!-- Le styles -->
@@ -128,10 +123,11 @@ session_start();
 
   </body>
 
-  <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
-  <script type="text/javascript" src="../js/bootstrap-dropdown.js"></script>
-  <script src="../js/bootstrap.min.js"></script>
-  <script src="../js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap-dropdown.js"></script>
+  <script type="text/javascript" src="agregaProfe.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.js"></script>
 
   <script type="text/javascript">
 
@@ -143,6 +139,8 @@ session_start();
         ($("#nueva_pass").val().length < 1)){
         alert("Complete todos los campos e intente de nuevo.");
       }else{
+        var datos = $("#nuevo_rut").val()+"," + $("#nuevo_nombre").val()+"," +  $("nueva_pass").val();
+        agregaProfesor(datos);
         alert("Un nuevo profesor ha sido agregado exitosamente.");
         $("#nuevo_rut").val("");
         $("#nuevo_nombre").val("");
