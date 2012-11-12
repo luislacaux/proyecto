@@ -74,7 +74,7 @@ var restultadoformulario = function(data){
        $("div.info").append("Respuesta: "+data.respuesta);
        if (data.respuesta == 1){
            alert("Formulario Creado con éxito");
-           location.href='../formularios/crear_formulario.html'; 
+           location.href='../formularios/crear_formulario.php'; 
             }
        else {
            $("div.info").append("no se pudo guardar");

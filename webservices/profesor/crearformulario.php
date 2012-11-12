@@ -14,7 +14,7 @@ function crearformulario($id){
     $largo = count($id)-1;
     $nom= (string) $id[0];
     
-    $query = "INSERT INTO formulario (nombre) VALUES('$nom')";//agregar id profesor $_SESSION
+    $query = "INSERT INTO formulario (nombre) VALUES('$nom')";
     $resQuery = mysql_query($query,$db) or die(mysql_error());
     $query2 = "SELECT id FROM formulario WHERE nombre='$nom'";
     $resQuery2 = mysql_query($query2,$db) or die(mysql_error());

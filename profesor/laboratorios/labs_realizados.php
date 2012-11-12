@@ -8,7 +8,7 @@ session_start();
   <head>
     <meta charset="utf-8">
     <title>Formulario de Quimica</title>
-    <
+    
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -24,7 +24,9 @@ session_start();
       body {
         padding-top: 60px;
         padding-bottom: 40px;
+      background: #C7EEBB; 
       }
+      .formatoTabla {width: 400px;background-color: white;}
     </style>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements 
@@ -49,7 +51,7 @@ session_start();
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-          </button>
+          </button> 
           <a class="brand">Laboratorio Química</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
@@ -58,7 +60,7 @@ session_start();
               </li>
               <ul class="nav">
                   <li class="dropdown">  
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Laboratorios
+                    <a href="#" class="dropdown-toggle"data-toggle="dropdown">Laboratorios
                       <b class="caret"></b>  
                     </a>  
                     <ul class="dropdown-menu"> 
@@ -119,22 +121,23 @@ session_start();
       </div>
     </div>
 
-    <div class="container-fluid">
-      
-          <center>
-            <h3>Laboratorio N°1</h3>
-            <p><a class="btn" href="setup-notes.html">IR &raquo;</a></p>
-         
+    <center><legend>Lista laboratorios realizados</legend></center>
 
-            <h3>Laboratorio N°2</h3>
-            <p><a class="btn" href="setup-notes.html">IR &raquo;</a></p>
-     
-            
-            <p><h3>Laboratorio N°3</h3><a class="btn" href="setup-notes.html">IR &raquo;</a></p>
-        </center>
+    <div id="container">
+        <form id="f" name="f">
+          <center><table id="tablaLaboratorios" class="table table-bordered formatoTabla" >
+                <tr>
+                    <th><center>Laboratorio</center></th>
+                    <th><center>Año</center></th>
+                    <th><center>Semestre</center></th>
+                    <th></th>
+                </tr>
+            </table></center>
+        </form>
+    </div>
+    
 
-   </div> <!-- /container -->
-
+    
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -142,6 +145,42 @@ session_start();
   <script type="text/javascript" src="../js/bootstrap-dropdown.js"></script>
   <script src="../js/bootstrap.min.js"></script>
   <script src="../js/bootstrap.js"></script>
+
+  <script type="text/javascript">
+
+    function nuevaFila(nomlab,anio,semestre){
+      $("#tablaLaboratorios").append("<tr>"+
+        "<td class='celdaLab'><center>"+nomlab+"</center></td>"+
+        "<td class='celdaAnio'><center>"+anio+"</center></td>"+
+        "<td class='celdaSem'><center>"+semestre+"</center></td>"+
+        "<td><center><input type='submit' value='Ver' class='btn btn-success'></center></td>"+"</tr>")
+    }
+    
+    var arrNomlab = ['Laboratorio N°1','Laboratorio N°2','Laboratorio N°3',
+                    'Laboratorio N°1','Laboratorio N°2','Laboratorio N°3',
+                    'Laboratorio N°1','Laboratorio N°2','Laboratorio N°3',
+                    'Laboratorio N°1','Laboratorio N°2','Laboratorio N°3',
+                    'Laboratorio N°1','Laboratorio N°2','Laboratorio N°3',
+                    'Laboratorio N°1','Laboratorio N°2','Laboratorio N°3'];
+    var arrAnio = [1999,1999,1999,
+                    1999,1999,1999,
+                    2000,2000,2000,
+                    2000,2000,2000,
+                    2001,2001,2001,
+                    2001,2001,2001];
+    var arrSem = ['1','1','1','2','2','2','1','1','1','2','2','2','1','1','1','2','2','2'];
+    
+
+    function obtenerForm(){
+          for (i=0;i<arrNomlab.length;i++){
+            nuevaFila(arrNomlab[i],arrAnio[i],arrSem[i]);
+          }
+    }
+   $(document).ready(obtenerForm());
+
+  
+
+  </script>
 
   </body>
 </html>

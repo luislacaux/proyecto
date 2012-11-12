@@ -1,7 +1,6 @@
 <?php
 require("../webservices/securityprof.php");
-include("../webservices/profesor/datosprofconect.php");
-session_start();
+
 
 ?>
 <!DOCTYPE html>
@@ -184,13 +183,14 @@ session_start();
     }
   </script>
    <script>
-        $(document).ready(function(){
-            var dat = datos();
+       $(document).ready(function(){
+          var dat = datos();
+	 console.log(dat);
                 
-            $("#nombre_profesor").val(dat); 
+        $("#nombre_profesor").text(dat); 
              
             
-        });
+       });
         
         
     </script>

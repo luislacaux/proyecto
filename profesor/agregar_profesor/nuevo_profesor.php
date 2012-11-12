@@ -111,16 +111,18 @@ session_start();
     </div>
 
     <div class="container-fluid">
-
-      <div class="row-fluid">
-        <div class="span12">
-          <center>
-            <img src="img/fotografia.jpg">
-            <p>Patricio Ruiz-Tagle</p>
-          </center>
-        </div>
-      </div><!-- end row 1 -->
-
+      <table class ="init" border="0" align="center">
+        <tr>
+          <td><b>Rut:</b></td><td><input id="nuevo_rut" size="20" value="" type="text"/></td>
+        </tr>
+        <tr>
+          <td><b>Nombre completo:</b></td><td><input id="nuevo_nombre" size="30" value="" type="text"/></td>
+        </tr>
+        <tr>
+          <td><b>Contraseña:</b></td><td><input id="nueva_pass" size="20" type="password"/></td>
+        </tr>
+        <tr><td><td><input type="submit" class="btn btn-success" id="agregar_profesor" value="Agregar profesor" /></td></tr>
+      </table>
     </div> <!-- /container -->
     
 
@@ -130,5 +132,28 @@ session_start();
   <script type="text/javascript" src="../js/bootstrap-dropdown.js"></script>
   <script src="../js/bootstrap.min.js"></script>
   <script src="../js/bootstrap.js"></script>
+
+  <script type="text/javascript">
+
+
+    function agregar_profesor(){
+
+      if( ($("#nuevo_rut").val().length < 1) || 
+        ($("#nuevo_nombre").val().length < 1) || 
+        ($("#nueva_pass").val().length < 1)){
+        alert("Complete todos los campos e intente de nuevo.");
+      }else{
+        alert("Un nuevo profesor ha sido agregado exitosamente.");
+        $("#nuevo_rut").val("");
+        $("#nuevo_nombre").val("");
+        $("#nueva_pass").val("");
+      }
+    }
+
+    
+    
+    $("#agregar_profesor").on("click",agregar_profesor)
+  
+  </script>
 
 </html>

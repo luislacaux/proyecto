@@ -158,16 +158,6 @@ session_start();
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/bootstrap.js"></script>
     <script type="text/javascript" src="../js/crear_formulario.js"></script>
-     <script>
-       $(document).ready(function(){
-       $("#boton").click(function(event){
-           //EAS_ENCRYPT('',$var.val());
-           validaruser( $("#rut").val()+" "+$("#contrasena").val() )
-   });
- });
-    
-       
- </script>
 
   </body>
 </html>

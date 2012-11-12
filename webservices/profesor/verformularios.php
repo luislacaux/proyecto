@@ -1,4 +1,5 @@
 <?php
+include("../mysql.php");
 obtieneformulario();
 
 function obtieneformulario(){

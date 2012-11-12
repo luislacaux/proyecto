@@ -1,5 +1,4 @@
 <?php
-include ("../mysql.php");
 error_reporting(E_ALL ^ E_NOTICE);
 include 'excel_reader.php';
 //tomo el valor de un elemento de tipo texto del formulario 
@@ -26,7 +25,7 @@ if (is_uploaded_file($_FILES['userfile']['tmp_name']))  {
                     $c = $c+1;
                 }
             }
-           $db = conectarDB();
+           $db = mysql_connect('localhost', 'root', 'taller');
            if (!$db) {
              die('Could not connect: ' . mysql_error());
             }

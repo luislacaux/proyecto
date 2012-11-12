@@ -26,6 +26,7 @@ session_start();
         padding-bottom: 40px;
         background: #C7EEBB; 
       }
+      .formatoTabla{width: 500px; background-color: white;}
     </style>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements 
@@ -120,6 +121,34 @@ session_start();
       </div>
     </div>
 
+    <div id="container">
+      <center>
+        <select id="select_grupo" class="comboBoxs">
+            <option val="0"><center>Seleccione grupo</center></option>
+            <option val="1"><center>1</center></option>
+            <option val="2"><center>2</center></option>
+            <option val="3"><center>3</center></option>
+            <option val="4"><center>4</center></option>
+            <option val="5"><center>5</center></option>
+            <option val="6"><center>6</center></option>
+            <option val="7"><center>7</center></option>
+        </select>
+        <input type='submit' id="ver_estudiantes" value='Ver estudiantes' class='btn btn-success' onClick="">
+      </center>
+    </div>
+
+    <div id="container">
+        <form id="f" name="f">
+            <center><table id="tablaEstudiantes" class="table table-bordered formatoTabla" >
+                <tr>
+                    <th ><center>RUT</center></th>
+                    <th ><center>Nombre</center></th>
+                    <th><center>Asistencia</center></th>
+                </tr>
+            </table></center>
+        </form>
+    </div>
+
 
     <!-- Le javascript
     ================================================== -->
@@ -128,6 +157,65 @@ session_start();
   <script type="text/javascript" src="../js/bootstrap-dropdown.js"></script>
   <script src="../js/bootstrap.min.js"></script>
   <script src="../js/bootstrap.js"></script>
+
+  <script type="text/javascript">
+
+    var n_fila = 0;
+    function nuevaFila(rut,nombre){
+      if (rut== 0){
+        alert("Seleccione un grupo por favor.");
+      }else{
+        $("#tablaEstudiantes").append("</center><tr id='fila_"+n_fila+"'>"+
+        "<td><center>"+rut+"</td>"+
+        "<td><center>"+nombre+"</center></td>"+
+        "<td><center><input name='elemento1' type='checkbox' value='1'/></center></td>"+
+        "</tr>")
+      }
+      
+    }
+    
+    var arrRut = ['1','2','3','4','5','6','7','8'];
+    var arrNom = ['a','b','c','d','e','f','g','h'];
+    
+    function obtenerForm(grupo){
+      if (n_fila > 0){
+        for (k=0;k<=n_fila;k++){
+          $("#fila_" + k).remove();
+        }
+
+        n_fila=0;
+
+      }
+
+      if (grupo == 'Seleccione grupo'){
+        nuevaFila(0,0);
+      }
+
+      else{
+        for (i=0;i<arrRut.length;i++){
+            n_fila = n_fila + i;
+            nuevaFila(arrRut[i],arrNom[i]);
+
+         }
+      }
+         
+    }
+
+    function get_grupo(){
+
+      var item_sel = $("#select_grupo").val();
+      obtenerForm(item_sel);
+
+    }
+
+    
+    
+    $("#ver_estudiantes").on("click",get_grupo)
+  
+
+  
+
+    </script>
 
   </body>
 </html>

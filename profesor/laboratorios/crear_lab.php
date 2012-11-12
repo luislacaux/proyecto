@@ -1,6 +1,6 @@
 <?php
-//require("../../webservices/securityprof.php");
-//session_start();
+require("../../webservices/securityprof.php");
+session_start();
 
 ?>
 
@@ -18,9 +18,8 @@
     <link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/bootstrap-responsive.css" rel="stylesheet">
     <link href="../js/prettify/prettify.css" rel="stylesheet">
-    <script type="text/javascript" src="laboratorios.js"></script>
-   
-    </script>
+<script type="text/javascript" src="../js/laboratorios.js"></script>
+
     <style type="text/css">
       body {
         padding-top: 60px;
@@ -31,7 +30,7 @@
                     }
       .comboBoxs {width: 60px}
       .textFields {width: 80px}
-      .comboform {width: 120px}
+	.comboform {width: 120px}
     </style>
 
   </head>
@@ -155,13 +154,11 @@
                 </tr>
                 <tr>
                   <th><center>Limite por grupo:  </center></th>
-                  <td><center><input id="limite" type='text' class="textFields" ></center></td>
+                  <td><center><input id="limite" type='text' class="textFields"></center></td>
                 </tr>
                 <tr>
                   <th><center>ID formulario:  </center></th>
                   <td><center><select id="nombreform" name="nombreform" type='text' class="comboform"  onfocus="javascript:_onpressed(this);">
-                  <option value="">Elija</option>
-                  </select></center></td>
                 </tr>
                 </table> 
                 </center>
@@ -171,7 +168,10 @@
     <div>
       <center><input type="submit" id="crear_lab" class="btn btn-success" value="Crear Laboratorio" /></center></div>
     
-   
+    <script>
+      function crear_lab(){
+      }
+    </script>
 
       
 
@@ -182,7 +182,8 @@
     <script type="text/javascript" src="../js/bootstrap-dropdown.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/bootstrap.js"></script>
-     <script>
+    
+<script>
         $(document).ready(function(){
         $("#crear_lab").click(function(event){
          var semestre = $('#semestre option:selected').val();
