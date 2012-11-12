@@ -5,7 +5,7 @@ var getformularios = function(arr){
     type: "GET",
     async: false,
     dataType: "json",
-    url: "formularios.php",
+    url: "../../webservices/profesor/verformularios.php",
   
     success: function(data){ 
         form = data.id+"$"+data.nombre+"$"+data.profesor+"$"+data.fecha;

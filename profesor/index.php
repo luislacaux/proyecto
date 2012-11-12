@@ -1,5 +1,6 @@
 <?php
 require("../webservices/securityprof.php");
+include("../webservices/profesor/datosprofconect.php");
 session_start();
 
 ?>
@@ -17,8 +18,7 @@ session_start();
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
     <link href="js/prettify/prettify.css" rel="stylesheet">
-
-
+   
     <!-- Le styles -->
     <style type="text/css">
       body {
@@ -118,7 +118,7 @@ session_start();
 
     <div class="container-fluid">
           
-          <b>Nombre:</b> <label id="nombre_profesor"></label>
+          <b>Nombre:</b><label id="nombre_profesor"></label>
           <b>Correo:</b> <label id="mail_profesor"></label>
           <br>
           <center>
@@ -176,12 +176,25 @@ session_start();
   <script type="text/javascript" src="js/bootstrap-dropdown.js"></script>  
   <script src="js/bootstrap.min.js"></script>
   <script src="js/bootstrap.js"></script>
+  <script src="js/index.js"></script>
   <script type="text/javascript">
     function ir_a_crear_lab()
     {
     parent.location="laboratorios/crear_lab.php"
     }
   </script>
+   <script>
+        $(document).ready(function(){
+            var dat = datos();
+                
+            $("#nombre_profesor").val(dat); 
+             
+            
+        });
+        
+        
+    </script>
+
   <head>
   
 

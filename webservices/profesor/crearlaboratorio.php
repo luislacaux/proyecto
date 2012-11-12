@@ -1,5 +1,5 @@
 <?php
-include ("mysql.php");
+include ("../mysql.php");
 
 //Inicio la sesion 
 session_start();
