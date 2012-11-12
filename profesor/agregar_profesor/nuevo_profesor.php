@@ -9,9 +9,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="js/prettify/prettify.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="../js/prettify/prettify.css" rel="stylesheet">
 
 
     <!-- Le styles -->
@@ -123,11 +123,11 @@
 
   </body>
 
-  <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap-dropdown.js"></script>
-  <script type="text/javascript" src="agregaProfe.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="../js/bootstrap-dropdown.js"></script>
+  <script type="text/javascript" src="../js/agregaProfe.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/bootstrap.js"></script>
 
   <script type="text/javascript">
 
