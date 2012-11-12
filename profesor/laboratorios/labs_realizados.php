@@ -1,6 +1,6 @@
 <?php
-require("../../webservices/securityprof.php");
-session_start();
+//require("../../webservices/securityprof.php");
+//session_start();
 
 ?>
 <!DOCTYPE html>
@@ -143,6 +143,7 @@ session_start();
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
   <script type="text/javascript" src="../js/bootstrap-dropdown.js"></script>
+  <script type="text/javascript" src="../js/obtieneLabs.js"></script>
   <script src="../js/bootstrap.min.js"></script>
   <script src="../js/bootstrap.js"></script>
 
@@ -156,8 +157,14 @@ session_start();
         "<td><center><input type='submit' value='Ver' class='btn btn-success'></center></td>"+"</tr>")
     }
     
+    var labs = getlaboratorios();
+    var arr = labs.split("$");
+    
+    //var arrNomLab="";
+    var arrAnio=arr[0].split(",");
+    var arrSem=arr[1].split(",");
     var arrNomlab = ['Laboratorio N°1','Laboratorio N°2','Laboratorio N°3',
-                    'Laboratorio N°1','Laboratorio N°2','Laboratorio N°3',
+                    'Laboratorio N°1','Laboratorio N°2'];/*,'Laboratorio N°3',
                     'Laboratorio N°1','Laboratorio N°2','Laboratorio N°3',
                     'Laboratorio N°1','Laboratorio N°2','Laboratorio N°3',
                     'Laboratorio N°1','Laboratorio N°2','Laboratorio N°3',
@@ -169,7 +176,7 @@ session_start();
                     2001,2001,2001,
                     2001,2001,2001];
     var arrSem = ['1','1','1','2','2','2','1','1','1','2','2','2','1','1','1','2','2','2'];
-    
+    */
 
     function obtenerForm(){
           for (i=0;i<arrNomlab.length;i++){
