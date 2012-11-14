@@ -12,4 +12,9 @@ function conectarDB(){
 function desconectarDB(){
 	mysql_close()or die(mysql_error());
 }
+function salir(){
+	session_start();
+	session_destroy();
+	header ("Location: ../index.php");
+} 
 ?>

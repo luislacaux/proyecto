@@ -107,7 +107,7 @@
                 <a href="../datos/mis_datos.php">Mis datos</a>
               </li>    
               <li>
-                <a href="login.php">Salir</a>
+                <a href="../../index.php">Salir</a>
               </li>           
             </ul>
            <!--/  <a class="btn btn-primary pull-right" href="http://twitter.github.com/bootstrap/">Twitter Bootstrap Home</a>-->

@@ -27,6 +27,29 @@ var results = function(txt){
      $("div.info2").append(txt);
       
   };
+  
+  
+var enviarEst = function(datos){
+       $.ajax({
+    data: "datos="+datos,
+    type: "POST",
+    dataType: "json",
+    url: "../../webservices/profesor/crearlaboratorio.php",
+    success: function(data){
+        respEst(data);
+        
+       
+     }
+   });
+    
+  };
+    
+var respEst = function(dato){
+
+
+
+} 
+
 
   function cierra(){
 window.close();

@@ -104,7 +104,7 @@ session_start();
                 <a href="../datos/mis_datos.php">Mis datos</a>
               </li>    
               <li>
-                <a href="login.php">Salir</a>
+                <a href="../../index.php">Salir</a>
               </li>           
             </ul>
            <!--/  <a class="btn btn-primary pull-right" href="http://twitter.github.com/bootstrap/">Twitter Bootstrap Home</a>-->
@@ -118,12 +118,12 @@ session_start();
       <div class="row-fluid">
         
         <div>
-            <center><select class="anio">Año:
+            <center><select id="anio"class="anio">Año:
               <option>2012</option>
               <option>2013</option>
             </select>
           
-            <select class="sems">
+            <select id="semestre" class="sems">
               <option>1</option>
               <option>2</option>
             </select>   </center>           
@@ -140,7 +140,10 @@ session_start();
                 <center><br>Seleccione el arhivo .CSV desde su máquina<br><br><input name="userfile" type="file" id="btn_elegir" class="btn btn-success" value="Elegir archivo" onclick="toggle_doble('primer_div','segundo_div')") /></center>
               </div>
               <div id="segundo_div" >
-                  <center><br>Por favor, confirme el archivo a subir<br><br><input type="submit" id="guardar" class="btn btn-success" value="Re-elegir archivo" onclick="toggle_doble('segundo_div','primer_div')")/>  <input type="submit" id="btn_confirmar" class="btn btn-success" value="Confirmar y subir" onclick="toggle_doble('segundo_div','tercer_div')"/></form></center>
+                  <center><br>Por favor, confirme el archivo a subir<br><br>
+                    <input type="submit" id="guardar" class="btn btn-success" value="Re-elegir archivo" onclick="toggle_doble('segundo_div','primer_div')")/> 
+                     Grupo: <input id="grupo" type='text' class="textFields">
+                     <input type="submit" id="btn_confirmar" class="btn btn-success" value="Confirmar y subir" onclick="toggle_doble('segundo_div','tercer_div')"/></form></center>
               </div>
               <div id="tercer_div">
                 <br><center><input type="submit" id="btn_ver_lista" class="btn btn-success" value="Ver lista de estudiantes" />
@@ -165,6 +168,7 @@ session_start();
   <script type="text/javascript" src="../js/bootstrap-dropdown.js"></script>
   <script src="../js/bootstrap.min.js"></script>
   <script src="../js/bootstrap.js"></script>
+  <script src="../js/obtieneEst.js"></script>
   <script type="text/javascript">
 
         
@@ -189,6 +193,20 @@ session_start();
       }
            
      </script>
+     <script>
+       $(document).ready(function(){
+        $("#btn_confirmar").click(function(event){
+         var semestre = $('#semestre option:selected').val();
+         //console.log(semestre);
+         var anio = $('#anio option:selected').val();
+         //console.log(periodo);
+         var grupo = $('#grupo').val();
+      
+         
+         crearlab(semestre+" "+anio+" "+grupo);
+   });
+ });
+ </script>
 
   </body>
 </html>

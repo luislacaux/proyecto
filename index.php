@@ -1,4 +1,6 @@
 <?php
+session_start();
+session_destroy();
  $var = "llave_quimica";
 ?>
 <html lang="en">
