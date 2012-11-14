@@ -32,7 +32,7 @@ function escrituraEstudiantes($id,$data){
             $datos = array();
             $c = 0;
             //$str = "";
-            for ($i = 2; $i <= 10; $i++) {
+            for ($i = 2; $i <= $data->rowcount(0); $i++) {
                 for ($j = 2; $j <= 7; $j++) {
                     $datos[$c] = $data->val($i,$j);
                     //$str .= $datos[$c];
