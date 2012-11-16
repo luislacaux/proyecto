@@ -112,18 +112,20 @@ session_start();
         </div>
       </div>
     </div>
-
+      
     <div class="container-fluid">
-
-      <div class="row-fluid">
         
+      <div class="row-fluid">
+         <form action="../../webservices/profesor/subir_estudiantes.php" method="post" enctype="multipart/form-data">
         <div>
-            <center><select id="anio"class="anio">A√±o:
+		
+
+            <center>AÒo: <select name="anio" id="anio"class="anio">AÒo:
               <option>2012</option>
               <option>2013</option>
             </select>
           
-            <select id="semestre" class="sems">
+            Semestre: <select id="semestre" name="semestre" class="sems">
               <option>1</option>
               <option>2</option>
             </select>   </center>           
@@ -136,34 +138,38 @@ session_start();
         <center>
                 
               <div id="primer_div" >
-                  <form action="../../webservices/profesor/subir_estudiantes.php" method="post" enctype="multipart/form-data">  
-                <center><br>Seleccione el arhivo .CSV desde su m√°quina<br><br><input name="userfile" type="file" id="btn_elegir" class="btn btn-success" value="Elegir archivo" onclick="toggle_doble('primer_div','segundo_div')") /></center>
+                
+                      Grupo: <input id="grupo" name="grupo" type='text' class="textFields">
+                <center><br>Seleccione el arhivo .CSV desde su m·quina<br><br><input name="userfile" type="file" id="btn_elegir" class="btn btn-success" value="Elegir archivo" onclick="javascript: toggle_doble('primer_div','segundo_div');"></center>
               </div>
-              <div id="segundo_div" >
+		<div id="segundo_div" >
                   <center><br>Por favor, confirme el archivo a subir<br><br>
-                    <input type="submit" id="guardar" class="btn btn-success" value="Re-elegir archivo" onclick="toggle_doble('segundo_div','primer_div')")/> 
-                     Grupo: <input id="grupo" type='text' class="textFields">
-                     <input type="submit" id="btn_confirmar" class="btn btn-success" value="Confirmar y subir" onclick="toggle_doble('segundo_div','tercer_div')"/></form></center>
-              </div>
+                    <input type="submit" id="guardar" class="btn btn-success" value="Re-elegir archivo" onclick="toggle_doble('segundo_div','primer_div')"/> 
+                     
+                     <input id="btn_confirmar" class="btn btn-success" type="submit" value="Confirmar y subir" onclick="toggle_doble('segundo_div','tercer_div')"/></center>
+              </div>    
+                 
               <div id="tercer_div">
                 <br><center><input type="submit" id="btn_ver_lista" class="btn btn-success" value="Ver lista de estudiantes" />
               </center>
               </div>
                 
           </center>
+            
 
       </div><!-- end row 1 -->
 
 
-      
+      </form>
 
 
     </div> <!-- /container -->
+    
 
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    
+  
     <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
   <script type="text/javascript" src="../js/bootstrap-dropdown.js"></script>
   <script src="../js/bootstrap.min.js"></script>
@@ -173,13 +179,14 @@ session_start();
 
         
        $(document).ready(function(){document.getElementById('segundo_div').style.display = 'none'} );
-         $(document).ready(function(){  document.getElementById('tercer_div').style.display = 'none'} );
+       $(document).ready(function(){  document.getElementById('tercer_div').style.display = 'none'} );
 
        
        
       
 
       function toggle_doble(id,id2){
+
          var ee = document.getElementById(id);
          var e = document.getElementById(id2);
          if(e.style.display == 'block'){
@@ -194,18 +201,7 @@ session_start();
            
      </script>
      <script>
-       $(document).ready(function(){
-        $("#btn_confirmar").click(function(event){
-         var semestre = $('#semestre option:selected').val();
-         //console.log(semestre);
-         var anio = $('#anio option:selected').val();
-         //console.log(periodo);
-         var grupo = $('#grupo').val();
-      
-         
-         crearlab(semestre+" "+anio+" "+grupo);
-   });
- });
+   
  </script>
 
   </body>

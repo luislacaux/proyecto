@@ -3,7 +3,7 @@
 function conectarDB(){
 	$db_host		= 'localhost';
 	$db_user		= 'root';
-	$db_pass		= '123';
+	$db_pass		= 'taller';
 	$db_database	        = 'quimica'; 
 	$conexion = mysql_connect($db_host,$db_user,$db_pass)or die(mysql_error());
 	mysql_select_db($db_database,$conexion)or die(mysql_error());
@@ -12,9 +12,4 @@ function conectarDB(){
 function desconectarDB(){
 	mysql_close()or die(mysql_error());
 }
-function salir(){
-	session_start();
-	session_destroy();
-	header ("Location: ../index.php");
-} 
 ?>

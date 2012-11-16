@@ -10,24 +10,21 @@ $idArray = explode(" ", $id);
 validarUsuario($idArray);
 
 function validarUsuario($idArray){
-               $link = mysql_connect("localhost", "root", "123");
+               $link = mysql_connect("localhost", "root", "taller");
                mysql_select_db("quimica");
                $rut = (string) $idArray[0];
-	       $query = "select tipo_rut('$rut')";
-               
-               //$query = "select rut from profesor where rut = '$rut'";
+	        $contrasena = (string) $idArray[1];
+               $pass = "AES_ENCRYPT('contrasena','llave_quimica')";
+               $query = "select tipo_rut('$rut')";
                $result = mysql_query($query);
                $prof = "PROFESOR";
 	        $est = "ESTUDIANTE";
                $line = mysql_fetch_row($result);
                $line2 = (string) $line[0];
-              
-               //
-               //
-             if( strcmp($line2, $prof) ==0){
-                //if( strcmp($line2, $rut) ==0){
+               
+               if( strcmp($line2, $prof) ==0){
                    $_SESSION["autenticadoprof"] = "SI";
-                   $_SESSION["rut"] = $rut;
+		     $_SESSION["rut"] = $rut;
 	            //$query2 = "select acceso_profesor('$rut','$pass')";
 		    //$result2 = mysql_query($query2);
 		   // $line3 = mysql_fetch_array($result2);

@@ -1,6 +1,6 @@
 <?php
-require("../../webservices/securityprof.php");
-session_start();
+//require("../../webservices/securityprof.php");
+//session_start();
 
 ?>
 <!DOCTYPE html>

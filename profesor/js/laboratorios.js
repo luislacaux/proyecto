@@ -5,7 +5,7 @@ var crearlab = function(dato){
     dataType: "json",
     url: "../../webservices/profesor/crearlaboratorio.php",
     success: function(data){
-        restultadolab(data);
+        resultadolab(data);
         
        
      }
@@ -15,21 +15,17 @@ var crearlab = function(dato){
     
   var resultadolab =function(data){
    $("div.info").html("").show();
-       $("div.info").append("tipo: "+data.semestre);
+       $("div.info").append("tipo: "+data.resp);
      
         //var asd= data.tipo;
         //console.log(asd);
-       if (data.tipo == "OK"){
+       if (data.resp == "OK"){
            alert("Laboratorio creado con éxito")
-           location.href='../'; } 
-       else {
-           if(data.tipo=="ESTUDIANTE"){
-           //console.log("estu");
-               location.href='estudiante/index.php';
-           }
-           //console.log(asd);
-           $("div.info").append("El rut no es correcto");
-       }
+           location.href='../'; 
+	}else{
+	    alert("No se ha podido crear el laboratorio, intentelo nuevamente");
+	} 
+       
       
   };
   

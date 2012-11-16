@@ -9,9 +9,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="js/prettify/prettify.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="../js/prettify/prettify.css" rel="stylesheet">
 
 
     <!-- Le styles -->
@@ -128,7 +128,7 @@
             <option val="6"><center>6</center></option>
             <option val="7"><center>7</center></option>
         </select>
-        <input type='submit' id="ver_estudiantes" value='Ver estudiantes' class='btn btn-success' onClick="">
+        <input type='submit' id="ver_estudiantes" value='Ver estudiantes' class='btn btn-success' onClick="javascript: get_grupo();">
       </center>
     </div>
 
@@ -148,11 +148,11 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap-dropdown.js"></script>
-  <script type="text/javascript" src="obtieneEst.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="../js/bootstrap-dropdown.js"></script>
+  <script type="text/javascript" src="../js/obtieneEst.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/bootstrap.js"></script>
 
   <script type="text/javascript">
 
@@ -201,12 +201,14 @@
 
     function get_grupo(){
   
-      var item_sel = $("#select_grupo").val();
+      var item_sel = $('#select_grupo option:selected').val();
       var est = getEstudiantes(item_sel);
       var arr = est.split("$");
-    
+      console.log(est);
       var arrRut=arr[0].split(",");
+	
       var arrNom=arr[1].split(",");
+
       
       
       obtenerForm(item_sel,arrRut,arrNom);
