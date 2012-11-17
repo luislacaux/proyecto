@@ -1,3 +1,13 @@
+<?php
+require_once('../dbms/conexion.php');
+require_once('../dbms/dbms_function.php');
+require_once('../dbms/db_obtenerDatos.php');
+
+$conexion = dbConectar($config_host_bd, $config_usuario_bd, $config_password_bd, $config_bd);
+$_temarios = dbObtieneEnunciados($conexion);
+
+?>
+
 <!doctype html> <!-- decirle al navegador que lo q viene es un documento html
 y por si usas html5 en tu doc -->
 <html>
@@ -31,8 +41,29 @@ y por si usas html5 en tu doc -->
 <title>Química</title>
 
 </head>
+ <script type="text/javascript">
+  function enviar_datos(){
+		var nfilas = document.getElementById('numero_filas').value; //para obtener el valor de numero_filas
+		var string ="";
+		var accion="ingresar_respuestas";
+		for (i=0; i<nfilas;i++){
+		var resp = document.getElementById('resp_'+i).value;
+		
+			string =string+resp+"|";
+		}
+		$.post("responder_ajax.php",{respuestas:string,faccion:accion},function(data){
+			//alert("datos enviados");
+			$('#respuesta_exe').fadeIn('fast');
+			$('#respuesta_exe').html(data);
+			$('#respuesta_exe').animate({opacity: 1.0},3000).fadeOut('slow');
+		});
+		
+  }
+ 
+ </script>
 
 <body>
+<div id="respuesta_exe"></div>
 <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -55,7 +86,7 @@ y por si usas html5 en tu doc -->
                     </a>  
                     <ul class="dropdown-menu"> 
                           <li><a href="../grupo/grupo.php">Crear grupo</a></li>  
-                          <li><a href="laboratorios/responder.php">Responder laboratorio</a></li>  
+                          <li><a href="responder.php">Responder laboratorio</a></li>  
                     </ul>  
                   </li> 
                </ul>
@@ -73,8 +104,7 @@ y por si usas html5 en tu doc -->
               </li>           
             </ul>
 
-           <!--/  <a class="btn btn-primary pull-right" href="http://twitter.github.com/bootstrap/">Twitter Bootstrap Home</a>-->
-          <!--</div><!--/.nav-collapse-->
+          
         </div>
       </div>
     </div>
@@ -83,72 +113,28 @@ y por si usas html5 en tu doc -->
 
 
 <div class="container-fluid">
-<!--<form class="form-horizontal">
-    <div class="control-group">
-     	<span>Enunciado 1</span>
-     	<input id="resp" type="text" placeholder="Respuesta">
-     	<span>Gramos</span>
-    </div>
-    <div class="control-group">
-      <span>Enunciado 2</span>
-      <input id="resp" type="text" placeholder="Respuesta">
-      <span>Gramos</span>
-    </div>
-    <div class="control-group">
-        <button id="enviar" type="submit" class="btn">Enviar</button>
-    </div>
-    </form>-->
+
  <table id="tablaRspLab" class="table tableclass">
     <tbody>
+	<?
+	$i = 0;
+		foreach($_temarios as $tem){
+			
+	?>
       <tr>
-        <td><span id="en1">Enunciado 1</span></td>
-        <td><input id="resp1" type="text" placeholder="Respuesta"></td>
-        <td><span id="uni1">unidad</span></td>
+        <td><span id="en_<?echo $i;?>"><?echo $tem["enunciados"];?></span></td>
+        <td><input id="resp_<?echo $i;?>" type="text" placeholder="Respuesta"></td> <!-- buscar como validar sólo numeros -->
+        <td><span id="uni_<?echo $i;?>"><?echo $tem["unidades"];?></span></td>
       </tr>
-      <tr>
-        <td><span id="en2">Enunciado 2</span></td>
-        <td><input id="resp2" type="text" placeholder="Respuesta"></td>
-        <td><span id= "ini2">unidad</span></td>
-      </tr>
-      <tr>
-        <td><span id="en3">Enunciado 3</span</td>
-        <td><input id="resp3" type="text" placeholder="Respuesta"></td>
-        <td><span id= "uni3">unidad</span></td>
-      </tr>
-      <tr>
-        <td><span id="en4">Enunciado 4</span></td>
-        <td><input id="resp4" type="text" placeholder="Respuesta"></td>
-        <td><span id="uni4">unidad</span></td>
-      </tr>
-      <tr>
-        <td><span id="en5">Enunciado 5</span></td>
-        <td><input id="resp5" type="text" placeholder="Respuesta"></td>
-        <td><span id="uni5">unidad</span></td>
-      </tr>
-     <!-- <tr>
-        <td><span id="en6">Enunciado 6</span></td>
-        <td><input id="resp6" type="text" placeholder="Respuesta"></td>
-        <td><span id="uni6">unidad</span></td>
-      </tr>
-      <tr>
-        <td><span id="en7">Enunciado 7</span></td>
-        <td><input id="resp7" type="text" placeholder="Respuesta"></td>
-        <td><span id="uni7">unidad</span></td>
-      </tr>
-      <tr>
-        <td><span id="en8">Enunciado 8</span></td>
-        <td><input id="resp8" type="text" placeholder="Respuesta"></td>
-        <td><span id="uni8">unidad</span></td>
-      </tr>
-      <tr>
-        <td><span id="en9">Enunciado 9</span></td>
-        <td><input id="resp9" type="text" placeholder="Respuesta"></td>
-        <td><span id="uni9">unidad</span></td>
-      </tr>-->
+	  <?
+	  $i++;
+	  }
+	  ?>
+     <input id="numero_filas" name="numero_filas" value="<?echo $i;?>" type="hidden"/>
     </tbody>
   </table>
    <div class="control-group">
-        <button id="enviar" type="submit" class="btn">Enviar</button>
+        <button id="enviar" onClick="enviar_datos()" class="btn">Enviar</button>
     </div>
 </div>
 </body>
