@@ -8,7 +8,7 @@ var getEstudiantes = function(grupo){
     url: "../../webservices/profesor/obtener_est.php",
   
     success: function(data){ 
-        form = data.rut+"$"+data.nombre;
+         form = data.rut+"$"+data.nombre;
     }
     
        
@@ -16,7 +16,8 @@ var getEstudiantes = function(grupo){
    return form;
   };
   
-var set_datos = function(datos){
+var set_datos = function(datos1,datos2){
+      
     
 
 }

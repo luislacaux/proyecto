@@ -1,6 +1,6 @@
 <?php
-require("../../webservices/securityprof.php");
-session_start();
+//require("../../webservices/securityprof.php");
+//session_start();
 
 ?>
 <!DOCTYPE html>
@@ -120,7 +120,7 @@ session_start();
         <div>
 		
 
-            <center>Año: <select name="anio" id="anio"class="anio">Año:
+            <center>Aï¿½o: <select name="anio" id="anio"class="anio">Aï¿½o:
               <option>2012</option>
               <option>2013</option>
             </select>
@@ -140,7 +140,7 @@ session_start();
               <div id="primer_div" >
                 
                       Grupo: <input id="grupo" name="grupo" type='text' class="textFields">
-                <center><br>Seleccione el arhivo .CSV desde su máquina<br><br><input name="userfile" type="file" id="btn_elegir" class="btn btn-success" value="Elegir archivo" onclick="javascript: toggle_doble('primer_div','segundo_div');"></center>
+                <center><br>Seleccione el arhivo .CSV desde su mï¿½quina<br><br><input name="userfile" type="file" id="btn_elegir" class="btn btn-success" value="Elegir archivo" onclick="javascript: toggle_doble('primer_div','segundo_div');"></center>
               </div>
 		<div id="segundo_div" >
                   <center><br>Por favor, confirme el archivo a subir<br><br>

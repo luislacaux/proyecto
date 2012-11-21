@@ -7,25 +7,26 @@ include("../mysql.php");
 function obtieneLabs($grp) {
    $db = conectarDB();
    
-   $query = "SELECT nombre,rut FROM estudiante WHERE grupo_paralelo ='$grp'";
-  
+   $query = "SELECT rut,nombre FROM estudiante WHERE grupo_paralelo ='$grp'";
+   
    $resQuery = mysql_query($query,$db) or die(mysql_error());
-   $row  = mysql_fetch_row($resQuery);
-  
-
-   $stringNombre = (string)$row[0];
-   $stringRut = $row[1];
- 
-  while($row = mysql_fetch_row($resQuery)){
-      $stringNombre = (string)($stringNombre.",".$row[0]);
-      $stringRut = $stringRut.",".$row[1];
-     
+   //$row  = mysql_fetch_array($resQuery);
+   
+   //$stringRut = $row['rut'];
+   // $stringNombre = $row['nom'];
+   $i=0;
+  while($row = mysql_fetch_array($resQuery,MYSQL_ASSOC)){
+       $stringRut[$i] = $row['rut'];
+       $stringNombre[$i] =$row['nombre'];
+       $i++;   
+      
    }
-
    $jsondata['nombre'] = $stringNombre;
    $jsondata['rut'] = $stringRut;
  
    echo json_encode($jsondata);
    mysql_close($db);
  }
+ 
+ 
 ?>

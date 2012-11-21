@@ -86,7 +86,7 @@ y por si usas html5 en tu doc -->
                     </a>  
                     <ul class="dropdown-menu"> 
                           <li><a href="../grupo/grupo.php">Crear grupo</a></li>  
-                          <li><a href="responder.php">Responder laboratorio</a></li>  
+                          <li><a href="../laboratorios/responder.php">Responder laboratorio</a></li>  
                     </ul>  
                   </li> 
                </ul>

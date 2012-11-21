@@ -1,6 +1,6 @@
 <?php
-require("../../webservices/securityprof.php");
-session_start();
+//require("../../webservices/securityprof.php");
+//session_start();
 
 ?>
 <!DOCTYPE html>
@@ -179,7 +179,6 @@ var infor = new Array();
         //string = rut+","+item_sel+","+lab;
         
         infor = [rut,grupo,labo];
-        console.log(infor);
         $("#tablaEstudiantes").append("</center><tr id='fila_"+n_fila+"'>"+
         "<td><center>"+rut+"</td>"+
         "<td><center>"+nombre+"</center></td>"+
@@ -228,12 +227,8 @@ console.log(dato1[0]);
       item_sel = $('#select_grupo option:selected').val();
       var est = getEstudiantes(item_sel);
       var arr = est.split("$");
-      console.log(est);
-      var arrRut=arr[0].split(",");
-	
+      var arrRut= arr[0].split(",");
       var arrNom=arr[1].split(",");
-
-      
       
       obtenerForm(item_sel,arrRut,arrNom,lab);
 

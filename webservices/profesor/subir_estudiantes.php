@@ -1,19 +1,26 @@
 <?php
 include ("../mysql.php");
 session_start();
-error_reporting(E_ALL ^ E_NOTICE);
-include 'excel_reader2.php';
 //tomo el valor de un elemento de tipo texto del formulario 
-$folder = "../../upload/";
+$folder = "../../upload";
 
 
 if (is_uploaded_file($_FILES['userfile']['tmp_name']))  {   
     if (move_uploaded_file($_FILES['userfile']['tmp_name'], $folder.$_FILES['userfile']['name'])) {
-	   
+	   $contador = 0;
+           $fp = fopen($folder."export.csv", "r");
+           while(( $data = fgetcsv ( $fp , 2048, ";" )) !== false ){
+                 foreach($data as $row){
+                     
+                     $datos[$contador]=$row;
+                     $contador++;
+                 }
+		}
           
-           $data = new Spreadsheet_Excel_Reader($folder.$_FILES['userfile']['name']);
-           echo $data->rowcount(0);
-          escrituraEstudiantes($data);          
+
+
+           //$data = new Spreadsheet_Excel_Reader($folder.$_FILES['userfile']['name']);
+           escrituraEstudiantes($datos);          
     } else {
          echo "File not moved to destination folder. Check permissions";
     }
@@ -27,54 +34,41 @@ if (is_uploaded_file($_FILES['userfile']['tmp_name']))  {
 
 
 function escrituraEstudiantes($data){
-           
-           //echo $data->dump(true,true);
-		
            $sem = $_POST["semestre"];
-            $anio = $_POST["anio"];
-            $grupo = $_POST["grupo"];
-		
-            $datos = array();
-            $c = 0;
-            //$str = "";
-            for ($i = 1; $i <= $data->rowcount(0); $i++) {
-                for ($j = 2; $j <= 5; $j++) {
-                    $datos[$c] = $data->val($i,$j);
-                    //$str .= $datos[$c];
-                    //$str .= " ";
-                    $c = $c+1;
-			
-                }
-            }
-		
-           $db = conectarDB();
+           $anio = $_POST["anio"];
+           $grupo = $_POST["grupo"];
+	   $db = conectarDB();
            if (!$db) {
              die('Could not connect: ' . mysql_error());
             }
-        //  (nombre_de_la_BD)  
+          
+            $apellido = 1;
+            $apellido_sin_espacios=  explode(" ",$data[$apellido]);
+            $nombre = 2;
+            $nombre_sin_espacios = explode(" ",$data[$nombre]);
+            $email = 3;
+            $rut = 4;
+            $rut_s_guion = explode("-",$data[$rut]);
+            $nom = $nombre_sin_espacios[0]." ".$nombre_sin_espacios[1]." ".$apellido_sin_espacios[0]." ".$apellido_sin_espacios[1];
+            $result = "INSERT INTO estudiante (rut,nombre,grupo_paralelo,correo,semestre,fecha) VALUES ('$rut_s_guion[0]','$nom','$grupo','$data[$email]','$sem','$anio')";
+            $resQuery3 = mysql_query($result,$db) or die(mysql_error());
            
-           for($k = 0;$k <(count($datos));$k=$k+4){
-              $apellido = $k;
-		$nom = $k +1;               
-		$correo = $k +2;
-		$rutt = $k +3;
-		$nombreCompleto = $datos[$nom]." ".$datos[$apellido];
-		echo $datos[$rutt];
-		$result = "INSERT INTO estudiante(rut,nombre,grupo_paralelo,correo,semestre,fecha) 
-                        VALUES ('$datos[$rutt]','$nombreCompleto','$grupo','$datos[$correo]','$sem','$anio')";
-		$resQuery3 = mysql_query($result,$db) or die(mysql_error());
-    
-
+           for($k = 6;$k <(count($data));$k=$k+6){
+               
+               $apellido = $k+1;
+               $apellido_sin_espacios=  explode(" ",$data[$apellido]);
+               $nombre = $k +2;
+               $nombre_sin_espacios = explode(" ",$data[$nombre]);
+               $email = $k +3;
+               $rut = $k +4;
+               $rut_s_guion = explode("-",$data[$rut]);
+               $nom = $nombre_sin_espacios[0]." ".$nombre_sin_espacios[1]." ".$apellido_sin_espacios[0]." ".$apellido_sin_espacios[1];
+               $result = "INSERT INTO estudiante (rut,nombre,grupo_paralelo,correo,semestre,fecha) VALUES ('$rut_s_guion[0]','$nom','$grupo','$data[$email]','$sem','$anio')";
+               $resQuery3 = mysql_query($result,$db) or die(mysql_error());
            }
-		
-         
            header("Location: ../../profesor/estudiantes/subir_lista.php");
-           
-    
-    
     
 }
-
 
 
 ?>
