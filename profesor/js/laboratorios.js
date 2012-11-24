@@ -69,7 +69,7 @@ function _onpressed(comboBox2)
     
    this._removeOptions( comboBox2 );
    for(var contador = 1; contador <= cant ; contador++) {
-              console.log("entre");
+              //console.log("entre");
               this._insertOption(comboBox2,nombres[contador] , nombres[contador]);
       
    }

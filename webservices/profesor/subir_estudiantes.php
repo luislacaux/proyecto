@@ -16,22 +16,13 @@ if (is_uploaded_file($_FILES['userfile']['tmp_name']))  {
                      $contador++;
                  }
 		}
-          
-
-
-           //$data = new Spreadsheet_Excel_Reader($folder.$_FILES['userfile']['name']);
-           escrituraEstudiantes($datos);          
+            escrituraEstudiantes($datos);          
     } else {
          echo "File not moved to destination folder. Check permissions";
     }
 } else {
      echo "File is not uploaded.";
 }
-
-
-
-
-
 
 function escrituraEstudiantes($data){
            $sem = $_POST["semestre"];

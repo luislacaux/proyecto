@@ -17,7 +17,7 @@
     <link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/bootstrap-responsive.css" rel="stylesheet">
     <link href="../js/prettify/prettify.css" rel="stylesheet">
-
+     <script type="text/javascript" src="../js/obtieneEst.js"></script>
 
     <!-- Le styles -->
     <style type="text/css">
@@ -123,15 +123,8 @@
 
     <div id="container">
       <center>
-        <select id="select_grupo" class="comboBoxs">
+        <select id="select_grupo" class="comboBoxs" onfocus="javascript:_onpressed(this);">
             <option val="0"><center>Seleccione grupo</center></option>
-            <option val="1"><center>1</center></option>
-            <option val="2"><center>2</center></option>
-            <option val="3"><center>3</center></option>
-            <option val="4"><center>4</center></option>
-            <option val="5"><center>5</center></option>
-            <option val="6"><center>6</center></option>
-            <option val="7"><center>7</center></option>
         </select>
           <select id="select_lab" class="comboBoxs">
             <option val="0"><center>Seleccione Laboratorio</center></option>
